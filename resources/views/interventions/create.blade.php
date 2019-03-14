@@ -27,7 +27,7 @@
               <label for="name">Type Intervention:</label>
               <select class="form-control" name="type">
                   <?php
-                  $pdo = new PDO('mysql:host=localhost;dbname=sdi', 'sdiuser', 'Sdi2019user');
+                  $pdo = new PDO('mysql:host=api.tangorythm.com;dbname=sdi', 'sdiuser', 'Sdi2019user');
                   $sql = "SELECT * FROM type_intervs";
                   $stmt = $pdo->prepare($sql);
                   $stmt->execute();
