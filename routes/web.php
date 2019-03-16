@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('auth/login');
+    return redirect('auth/login');
 });
 
 Route::get('/accesinterdit',function(){
