@@ -91,7 +91,6 @@ class UserController extends Controller
     {
       $request->validate([
         'email'=>'required',
-        'password'=> 'required',
         'telephone' => 'required|numeric',
         'usertype' =>'required'
     ]);
