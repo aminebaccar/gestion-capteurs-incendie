@@ -6,6 +6,8 @@
 
   include_once '../../config/Database.php';
   include_once '../../models/Historique.php';
+  require __DIR__.'/vendor/autoload.php';
+
 
 
   $database = new Database();
