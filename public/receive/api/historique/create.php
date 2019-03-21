@@ -35,7 +35,7 @@
     $query = 'SELECT distinct telephone
       FROM users inner join capteurs on (users.etab=capteurs.etab) inner join historiques on (capteurs.code_capteur=historiques.capteur)
       where historiques.capteur='.$historique->capteur;
-    $stmt = $this->conn->prepare($query);
+    $stmt = $historique->conn->prepare($query);
     $stmt->execute();
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
       $osms->sendSMS('tel:+21693233173', 'tel:+216' . $row['telephone'], "Capteur ".$historique->capteur. " est en incendie", 'Baccar');
