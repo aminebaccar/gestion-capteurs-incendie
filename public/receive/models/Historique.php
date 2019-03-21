@@ -38,4 +38,7 @@
 
       return false;
     }
+    public function getConn() {
+    return $this->age;
+  }
   }
