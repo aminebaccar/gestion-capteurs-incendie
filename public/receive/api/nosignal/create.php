@@ -42,7 +42,7 @@ echo $row1['capteur'];
     echo $last;
     $lasttime = strtotime($last);
 
-    $minutes = abs(strtotime($historique->created_at) - $lasttime) / 60;
+    $minutes = strtotime($historique->created_at) - $lasttime / 60;
     echo " BONJOUR   ".$minutes;
     if($minutes > 60)
     {
