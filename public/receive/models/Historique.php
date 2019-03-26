@@ -31,7 +31,7 @@
           $stmt->bindParam(':updated_at', $this->updated_at);
 
           if($stmt->execute()) {
-            return true;
+            return true; 
       }
 
       printf("Error: %s.\n", $stmt->error);
