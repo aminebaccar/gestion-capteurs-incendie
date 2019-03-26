@@ -33,7 +33,7 @@ echo $row1['capteur'];
 
     $query0 = 'SELECT created_at
       FROM historiques
-      order by created_at desc
+      order by id desc
       limit 1';
     $stmt0 = $historique->getConn()->prepare($query0);
     $stmt0->execute();
