@@ -39,6 +39,7 @@ echo $row1['capteur'];
     $stmt0->execute();
     $row0 = $stmt0->fetch(PDO::FETCH_ASSOC);
     $last = $row0['created_at'];
+    echo $last;
     $lasttime = strtotime($last);
 
     $minutes = abs(strtotime($historique->created_at) - $lasttime) / 60;
