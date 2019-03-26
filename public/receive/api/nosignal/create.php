@@ -45,7 +45,7 @@ echo $row1['capteur'];
     $minutes = strtotime($historique->created_at) - $lasttime / 60;
     echo " BONJOUR   ".$minutes;
     if($minutes > 60)
-    {
+    {echo " BONJOOOOOOR";
     if($historique->create()) {
       echo json_encode(
         array('message' => 'historique ajouté')
