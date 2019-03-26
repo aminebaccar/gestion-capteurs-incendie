@@ -24,7 +24,7 @@
   $lasttime1 = time()-strtotime($last1)/60;
 echo $lasttime1;
 echo $row1['capteur'];
-  $historique->eveneme<nt = "Pas de signal";
+  $historique->evenement = "Pas de signal";
   $historique->capteur = $row1['capteur'];
   $historique->consulte = null;
   $historique->created_at = $row1['created_at'];
