@@ -66,7 +66,7 @@ echo $row1['capteur'];
       $stmt->execute();
       while($row = $stmt->fetch(PDO::FETCH_ASSOC))
       {
-        $osms->sendSMS('tel:+21693233173', 'tel:+216' . $row['telephone'], "Capteur ".$historique->capteur. " est en incendie", 'Baccar');
+        $osms->sendSMS('tel:+21693233173', 'tel:+216' . $row['telephone'], "Capteur ".$historique->capteur. " n'a pas de signal", 'Baccar');
       }
 
       }
