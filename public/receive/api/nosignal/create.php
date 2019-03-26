@@ -21,10 +21,10 @@
   while($row1 = $stmt1->fetch(PDO::FETCH_ASSOC)){
 
   $last1 = $row1['created_at'];
-  $lasttime1 = time()-strtotime($last1);
+  $lasttime1 = time()-strtotime($last1)/60;
 echo $lasttime1;
 echo $row1['capteur'];
-  $historique->evenement = "Pas de signal";
+  $historique->eveneme<nt = "Pas de signal";
   $historique->capteur = $row1['capteur'];
   $historique->consulte = null;
   $historique->created_at = $row1['created_at'];
