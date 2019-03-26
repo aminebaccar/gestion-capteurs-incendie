@@ -23,6 +23,7 @@
   $last1 = $row1['created_at'];
   $lasttime1 = strtotime($last);
 echo $lasttime1;
+echo "HI"
   $historique->evenement = "Pas de signal";
   $historique->capteur = $row1['capteur'];
   $historique->consulte = null;
