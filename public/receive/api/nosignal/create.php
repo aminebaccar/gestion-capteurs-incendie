@@ -33,7 +33,7 @@
   $historique->created_at = $row1['created_at'];
 
   if($lasttime1>2){
-    
+
     $query0 = 'SELECT created_at
       FROM historiques
       order by created_at desc
@@ -68,8 +68,6 @@
       {
         $osms->sendSMS('tel:+21693233173', 'tel:+216' . $row['telephone'], "Capteur ".$historique->capteur. " est en incendie", 'Baccar');
       }
-
-
 
       }
       else {
