@@ -21,7 +21,7 @@
   while($row1 = $stmt1->fetch(PDO::FETCH_ASSOC)){
 
   $last1 = $row1['created_at'];
-  $lasttime1 = strtotime($last1)-time();
+  $lasttime1 = time()-strtotime($last1);
 echo $lasttime1;
 echo "HI";
   $historique->evenement = "Pas de signal";
