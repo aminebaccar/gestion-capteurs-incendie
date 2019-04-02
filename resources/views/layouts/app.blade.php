@@ -60,7 +60,7 @@
                                 <div class="nav-item d-none d-md-flex">
                                     <a class="btn btn-link" href="{{ route('login') }}">@lang('Authentification')</a>
                                 </div>
-                                <input id="loggedin" name="loggedin" type="hidden" value="none">
+                                <input id="loggedin" name="loggedin" type="hidden" value="{{Auth::user()->email}}">
 
                             @else
 
