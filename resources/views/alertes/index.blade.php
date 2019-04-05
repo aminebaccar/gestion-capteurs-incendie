@@ -37,7 +37,7 @@
                       <tbody>
                         @foreach($historiques as $historique)
                         <?php $capteur = Capteur::find($historique->capteur);?>
-                        @if($s['etab']==$capteur->etab || $s['usertype']=="super" )
+                        @if($s['etab']==$capteur['etab'] || $s['usertype']=="super" )
                         <tr>
                           @if($s['usertype']=="super")<td><span class="text-muted">{{$historique->id}}</span></td>@endif
                           <td>{{$historique->evenement}}</td>
