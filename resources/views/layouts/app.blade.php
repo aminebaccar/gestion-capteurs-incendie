@@ -54,7 +54,8 @@
                                 class="header-brand-img"
                                 alt="gci logo">
                         </a>
-                        <input id="loggedin" name="loggedin" type="hidden" value="{{Auth::user()->email}}">
+						<?php $u = Auth::user()?>
+                        <input id="loggedin" name="loggedin" type="hidden" value="{{$u['email']}}">
 
                         <div class="d-flex order-lg-2 ml-auto">
                             @guest
