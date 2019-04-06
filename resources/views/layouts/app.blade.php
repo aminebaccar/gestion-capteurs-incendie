@@ -54,18 +54,17 @@
                                 class="header-brand-img"
                                 alt="gci logo">
                         </a>
+                        <input id="loggedin" name="loggedin" type="hidden" value="{{Auth::user()->email}}">
 
                         <div class="d-flex order-lg-2 ml-auto">
                             @guest
                                 <div class="nav-item d-none d-md-flex">
                                     <a class="btn btn-link" href="{{ route('login') }}">@lang('Authentification')</a>
                                 </div>
-                                <input id="loggedin" name="loggedin" type="hidden" value="none">
 
                             @else
 
 
-                            <input id="loggedin" name="loggedin" type="hidden" value="{{Auth::user()->email}}">
 
 
                             <div class="dropdown d-none d-md-flex show">
