@@ -56,8 +56,6 @@
                                 alt="gci logo">
                         </a>
 						<?php $et = Etablissement::find(auth()->user()['etab']);?>
-                        <input id="etb" name="etb" type="hidden" value="{{$et['id']}}">
-
                         <div class="d-flex order-lg-2 ml-auto">
                             @guest
                                 <div class="nav-item d-none d-md-flex">
@@ -213,6 +211,8 @@
             </div>
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
               Copyright © 2019 <a href=".">GCI</a>. All rights reserved.
+			  <input id="etb" name="etb" type="hidden" value="{{$et['id']}}">
+
             </div>
           </div>
         </div>
