@@ -55,7 +55,7 @@
                                 alt="gci logo">
                         </a>
 						<?php $u = Auth::user()?>
-                        <input id="loggedin" name="loggedin" type="hidden" value="{{auth()->user()['etab']}}">
+                        <input id="etb" name="etb" type="hidden" value="{{auth()->user()['etab']}}">
 
                         <div class="d-flex order-lg-2 ml-auto">
                             @guest
