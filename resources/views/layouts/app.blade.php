@@ -60,7 +60,7 @@
 						$et = Etablissement::where('nom', $us['etab'])->first();
 
 						?>
-						<h1><?php echo $et['id']; ?></h1>
+						
                         <div class="d-flex order-lg-2 ml-auto">
                             @guest
                                 <div class="nav-item d-none d-md-flex">
