@@ -43,6 +43,7 @@
   <?php use App\Capteur;?>
   <?php use App\User;?>
   <?php use App\Historique;?>
+   <?php use App\Etablissement;?>
     <div id="app">
 
         <div class="header py-4">
