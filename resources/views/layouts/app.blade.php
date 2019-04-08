@@ -24,8 +24,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.js"></script>
-	<input id="etb" name="etb" type="hidden" value="{{$et['id']}}">
-
 
    <script>
     $(document).ready( function () {
@@ -218,6 +216,7 @@
             </div>
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
               Copyright © 2019 <a href=".">GCI</a>. All rights reserved.
+			  <input id="etb" name="etb" type="hidden" value="{{$et['id']}}">
 
             </div>
           </div>
