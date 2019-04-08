@@ -55,7 +55,10 @@
                                 class="header-brand-img"
                                 alt="gci logo">
                         </a>
-						<?php $et = Etablissement::find(Auth::user()->etab)?>
+						<?php 
+						$us = Auth::user();
+						$et = Etablissement::find($us['etab']);
+						?>
                         <div class="d-flex order-lg-2 ml-auto">
                             @guest
                                 <div class="nav-item d-none d-md-flex">
