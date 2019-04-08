@@ -54,8 +54,8 @@
                                 class="header-brand-img"
                                 alt="gci logo">
                         </a>
-						<?php $u = Auth::user()?>
-                        <input id="etb" name="etb" type="hidden" value="{{auth()->user()['etab']}}">
+						<?php $et = Etablissement::find(auth()->user()['etab']);?>
+                        <input id="etb" name="etb" type="hidden" value="{{$et}}">
 
                         <div class="d-flex order-lg-2 ml-auto">
                             @guest
