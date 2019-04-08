@@ -56,7 +56,7 @@
                                 alt="gci logo">
                         </a>
 						<?php $et = Etablissement::find(auth()->user()['etab']);?>
-                        <input id="etb" name="etb" type="hidden" value="{{$et}}">
+                        <input id="etb" name="etb" type="hidden" value="{{$et['id']}}">
 
                         <div class="d-flex order-lg-2 ml-auto">
                             @guest
