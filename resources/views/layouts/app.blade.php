@@ -214,7 +214,7 @@
             </div>
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
               Copyright © 2019 <a href=".">GCI</a>. All rights reserved.
-			  <input id="etb" name="etb" type="hidden" value="{{$et['id']}}">
+			  <input id="etb" name="etb" type="hidden" value="{{$et['email']}}">
 
             </div>
           </div>
