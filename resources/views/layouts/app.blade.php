@@ -4,8 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php use App\Capteur;?>
+    <?php use App\User;?>
+    <?php use App\Historique;?>
+     <?php use App\Etablissement;?>
+     <?php
+     $us = Auth::user();
+     $et = Etablissement::where('nom', $us['etab'])->first();
 
-
+     ?>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -54,10 +61,6 @@
 
 </head>
 <body>
-  <?php use App\Capteur;?>
-  <?php use App\User;?>
-  <?php use App\Historique;?>
-   <?php use App\Etablissement;?>
     <div id="app">
 
         <div class="header py-4">
@@ -69,11 +72,7 @@
                                 class="header-brand-img"
                                 alt="gci logo">
                         </a>
-						<?php
-						$us = Auth::user();
-						$et = Etablissement::where('nom', $us['etab'])->first();
 
-						?>
 
                         <div class="d-flex order-lg-2 ml-auto">
                             @guest
