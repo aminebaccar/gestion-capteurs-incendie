@@ -36,7 +36,7 @@
         });
       });
       OneSignal.push(function() {
-        OneSignal.sendTag("etab", <?php {{$et['id']}} ?>);
+        OneSignal.sendTag("etab", <?php echo $et['id']; ?>);
       });
     </script>
    <script>
