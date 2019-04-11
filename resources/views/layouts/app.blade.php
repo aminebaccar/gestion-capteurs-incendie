@@ -35,6 +35,9 @@
           },
         });
       });
+      OneSignal.push(function() {
+        OneSignal.sendTag("etab", <?php {{$et['id']}} ?>);
+      });
     </script>
    <script>
     $(document).ready( function () {
