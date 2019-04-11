@@ -24,7 +24,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.js"></script>
-
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "0d7c813b-31f6-47a0-a80e-f1793086c5af",
+          notifyButton: {
+            enable: true,
+          },
+        });
+      });
+    </script>
    <script>
     $(document).ready( function () {
 
@@ -55,12 +66,12 @@
                                 class="header-brand-img"
                                 alt="gci logo">
                         </a>
-						<?php 
+						<?php
 						$us = Auth::user();
 						$et = Etablissement::where('nom', $us['etab'])->first();
 
 						?>
-						
+
                         <div class="d-flex order-lg-2 ml-auto">
                             @guest
                                 <div class="nav-item d-none d-md-flex">
