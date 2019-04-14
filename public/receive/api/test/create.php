@@ -40,7 +40,7 @@
 	///////////////////////////////////PUSH NOTIFICATION/////////////////////////
 
     $content = array(
-        "en" => 'Capteur '.$historique->capteur. 'est en incendie'
+        "en" => 'Capteur '.$historique->capteur. ' est en incendie'
         );
 		print_r($historique->capteur);
 		$q = 'SELECT etablissements.id from etablissements inner join capteurs on (etablissements.nom = capteurs.etab)
@@ -51,7 +51,7 @@
 		
     $fields = array(
         'app_id' => "a9e53700-31c3-4189-b2fc-5fbbc4634949",
-	'filters' => array(array("field" => "tag", "key" => "etab", "relation" => "=", "value" => $e->id)),
+	'filters' => array(array("field" => "tag", "key" => "etab", "relation" => "=", "value" => $e)),
         'data' => array("foo" => "bar"),
         'large_icon' =>"ic_launcher_round.png",
         'contents' => $content
