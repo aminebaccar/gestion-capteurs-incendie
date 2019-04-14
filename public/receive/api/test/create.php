@@ -42,16 +42,16 @@
     $content = array(
         "en" => 'Capteur '.$historique->capteur. ' est en incendie'
         );
-		print_r($historique->capteur);
+		
 		$q = 'SELECT etablissements.id from etablissements inner join capteurs on (etablissements.nom = capteurs.etab)
 		where capteurs.code_capteur='.$historique->capteur.' limit 1';
 		$st = $historique->getConn()->prepare($q);
 		$st->execute();
 		$e = $st->fetch(PDO::FETCH_ASSOC);
-		echo $e;
+		
     $fields = array(
         'app_id' => "a9e53700-31c3-4189-b2fc-5fbbc4634949",
-	'filters' => array(array("field" => "tag", "key" => "etab", "relation" => "=", "value" => $e)),
+	'filters' => array(array("field" => "tag", "key" => "etab", "relation" => "=", "value" => $e['id'])),
         'data' => array("foo" => "bar"),
         'large_icon' =>"ic_launcher_round.png",
         'contents' => $content
