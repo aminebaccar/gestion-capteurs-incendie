@@ -42,9 +42,7 @@
           },
         });
       });
-      OneSignal.push(function() {
-        OneSignal.sendTag("etab", <?php echo $et['id']; ?>);
-      });
+      OneSignal.push(function() {OneSignal.sendTag("etab", <?php echo $et['id']; ?>);});
     </script>
    <script>
     $(document).ready( function () {
