@@ -40,7 +40,7 @@
 	///////////////////////////////////PUSH NOTIFICATION/////////////////////////
 
     $content = array(
-        "en" => 'Capteur '.$historique->capteur. 'est en incendie';
+        "en" => 'Capteur '.$historique->capteur. 'est en incendie'
         );
 
 		$q = 'SELECT etab from capteurs where capteur='.$historique.capteur.' limit 1';
