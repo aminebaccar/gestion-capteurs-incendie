@@ -48,7 +48,7 @@
 		$st = $historique->getConn()->prepare($q);
 		$st->execute();
 		$e = $st->fetch(PDO::FETCH_ASSOC);
-		
+		echo $e;
     $fields = array(
         'app_id' => "a9e53700-31c3-4189-b2fc-5fbbc4634949",
 	'filters' => array(array("field" => "tag", "key" => "etab", "relation" => "=", "value" => $e)),
