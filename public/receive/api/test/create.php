@@ -42,7 +42,7 @@
     $content = array(
         "en" => 'Capteur '.$historique->capteur. 'est en incendie'
         );
-
+		print_r($historique->capteur);
 		$q = 'SELECT etab from capteurs where code_capteur='.$historique.capteur.' limit 1';
 		$st = $historique->getConn()->prepare($q);
 		$st->execute();
