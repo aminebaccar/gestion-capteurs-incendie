@@ -13,7 +13,7 @@
     </div><br />
   @endif
 
-<div class="card" style="min-width:50%; width:70%; margin: auto;">
+<div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
     <p style="font-size:20px">Historiques
     </p>
@@ -21,7 +21,7 @@
                   <div class="table-responsive">
                     <div class="container">
                     <table id="id" class="table card-table table-vcenter text-nowrap" style="margin: auto;
-  width: 70%;
+  width: 100%;
   padding: 10px;" >
                       <thead>
                         <tr>
