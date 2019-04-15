@@ -18,7 +18,7 @@
     </div><br />
   @endif
 
-<div class="card" style="width:auto%; margin: auto;">
+<div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
     <p style="font-size:20px">Interventions<span class="float-right" ><a href="interventions/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Intervention +</a>
     </span>

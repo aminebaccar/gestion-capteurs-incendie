@@ -28,7 +28,7 @@
     </div><br />
   @endif
 <input type="hidden" id="logged" name="loggedin" value="{{Auth::user()->email}}"/>
-<div class="card" style="width:50%; margin: auto;">
+<div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
     <p style="font-size:20px">Capteurs
     <span class="float-right" ><a href="capteurs/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Capteur +</a>
@@ -37,7 +37,7 @@
                   <div class="table-responsive">
                     <div class="container">
                     <table id="id" class="table card-table table-vcenter text-nowrap" style="margin: auto;
-  width: 70%;
+  width: 100%;
   padding: 10px;" >
                       <thead>
                         <tr>

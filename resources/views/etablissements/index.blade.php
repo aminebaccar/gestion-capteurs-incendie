@@ -18,7 +18,7 @@
     </div><br />
   @endif
 
-<div class="card" style="width:77%; margin: auto;">
+<div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
     <p style="font-size:20px">Établissements
     <span class="float-right" ><a href="etablissements/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Établissement +</a>
@@ -27,7 +27,7 @@
                   <div class="table-responsive" width="100%">
                     <div class="container" >
                     <table id="id" class="table card-table table-vcenter text-nowrap" style="margin: auto;
-  width: 97%;
+  width: 100%;
   padding: 10px;" width="97%">
                       <thead>
                         <tr>
