@@ -28,7 +28,7 @@
                     <div class="container" >
                     <table id="id" class="table card-table table-vcenter text-nowrap" style="margin: auto;
   width: 100%;
-  padding: 10px;" width="97%">
+  padding: 10px;">
                       <thead>
                         <tr>
                           <th class="w-1">ID.</th>
