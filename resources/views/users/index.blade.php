@@ -18,7 +18,7 @@
     </div><br />
   @endif
 
-<div class="card" style="width:77%; margin: auto;">
+<div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
     <p style="font-size:20px">Utilisateurs
     <span class="float-right" ><a href="users/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Utilisateur +</a>
@@ -27,8 +27,8 @@
                   <div class="table-responsive" width="100%">
                     <div class="container" >
                     <table id="id" class="table card-table table-vcenter text-nowrap" style="margin: auto;
-  width: 97%;
-  padding: 10px;" width="97%">
+  width: 100%;
+  padding: 10px;">
                       <thead>
                         <tr>
                           @if (Auth::user()->usertype=="super")<th class="w-1">ID.</th>@endif
