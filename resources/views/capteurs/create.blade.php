@@ -21,7 +21,7 @@
       </div><br />
     @endif
       <form method="post" action="{{ route('capteurs.store') }}">
-        <div class="col-6">
+        @handheld <div> @elsehandheld <div class="col-6"> @endhandheld
           <div class="form-group">
               @csrf
               <label for="name">Code Capteur:</label>

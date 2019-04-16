@@ -21,7 +21,7 @@
       </div><br />
     @endif
       <form method="post" action="{{ route('etablissements.store') }}">
-        <div class="col-4">
+      @handheld <div> @elsehandheld   <div class="col-4"> @endhandheld
           <div class="form-group">
               @csrf
               <label for="email">Nom Établissement:</label>

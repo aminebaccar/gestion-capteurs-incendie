@@ -23,7 +23,7 @@
       <form method="post" action="{{ route('users.update', $user->id) }}">
         @method('PATCH')
         @csrf
-        <div class="col-5">
+        @handheld <div> @elsehandheld <div class="col-5"> @endhandheld
         <div class="form-group">
           <label for="username">Pseudo Utilisateur:</label>
           <input type="text" class="form-control" name="email" value={{ $user->email }} />
@@ -37,7 +37,7 @@
           <input type="text" class="form-control" name="telephone" value={{ $user->telephone }} />
         </div>
       </div>
-      <div class="col-10">
+      @handheld <div> @elsehandheld <div class="col-10"> @endhandheld
         <div class="form-group">
           <label for="usertype">Type Utilisateur:</label><br/>
            <input id="normal" type="radio" name="usertype" value="normal"<?php if ($user->usertype=="normal"): ?> checked<?php endif;?> > Normal    </input>
