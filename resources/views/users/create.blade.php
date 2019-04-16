@@ -57,7 +57,7 @@
             <input id="etab" name="etab" type="hidden" value="{{Auth::user()->etab}}">
           @endif
         </div>
-        <div class="col-10">
+      @handheld  <div> @elsehandheld <div class="col-10"> @endhandheld
           <div class="form-group">
             <label for="usertype">Type Utilisateur:</label>
             <input id="normal" type="radio" name="usertype" value="normal" checked> Normal     </input>
