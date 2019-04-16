@@ -61,7 +61,6 @@
 </head>
 <body>
     <div id="app">
-@handheld <h1>HELLLOOOOOOOOOOOOOOOOOOOOOOOO</h1> @endhandheld
         <div class="header py-4">
                 <div class="container">
                     <div class="d-flex">

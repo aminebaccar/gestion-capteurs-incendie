@@ -21,7 +21,7 @@
       </div><br />
     @endif
       <form method="post" action="{{ route('users.store') }}">
-        <div class="col-4">
+        @handheld<div class="col-4"> @elsehandheld <div> @endhandheld
           <div class="form-group">
               @csrf
               <label for="email">Pseudo Utilisateur:</label>
