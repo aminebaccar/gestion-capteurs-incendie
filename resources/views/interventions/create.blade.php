@@ -69,7 +69,7 @@
                   $id = \Auth::user()->id;
                   $etab = \Auth::user()->etab;
 
-                  $sql = "SELECT * FROM users";
+                  $sql = "SELECT * FROM users order by etab";
                   $stmt = $pdo->prepare($sql);
                   $stmt->execute();
                   $users = $stmt->fetchAll();
