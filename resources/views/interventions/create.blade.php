@@ -28,7 +28,11 @@
               <select class="form-control" name="type">
                   <?php
                   $pdo = new PDO('mysql:host=api.tangorythm.com;dbname=sdi', 'sdiuser', 'Sdi2019user');
+                  if(\Auth::user()->usertype!="super")
                   $sql = "SELECT * FROM type_intervs where etab like ".\Auth::user()->etab;
+                  else {
+                    $sql = "SELECT * FROM type_intervs";
+                  }
                   $stmt = $pdo->prepare($sql);
                   $stmt->execute();
                   $types = $stmt->fetchAll();
