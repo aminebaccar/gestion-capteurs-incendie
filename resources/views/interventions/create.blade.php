@@ -42,7 +42,7 @@
               <select class="form-control" name="email">
                 <option value="{{ auth()->user()->id }}" name="email">Utilisateur Actuel</option>
                   <?php
-                  $pdo = new PDO('mysql:host=localhost;dbname=gestionpreventionincendie;charset=utf8', 'root', '');
+                  $pdo = new PDO('mysql:host=api.tangorythm.com;dbname=sdi;charset=utf8', 'sdiuser', 'Sdi2019user');
                   $id = \Auth::user()->id;
                   $etab = \Auth::user()->etab;
 
