@@ -30,12 +30,12 @@
                 <label for="etab">Établissement:</label>
                 <select class="form-control" name="etab">
                     <?php
-                    $pdo = new PDO('mysql:host=localhost;dbname=gestionpreventionincendie;charset=utf8', 'root', '');
+                    $pdo = new PDO('mysql:host=api.tangorythm.com;dbname=sdi;charset=utf8', 'sdiuser', 'Sdi2019user');
                     $sql = "SELECT * FROM etablissements";
                     $stmt = $pdo->prepare($sql);
                     $stmt->execute();
                     $etabs = $stmt->fetchAll();
-                     foreach($etabs as $etab): ?>
+                     foreach ($etabs as $etab): ?>
                     <option value="<?= $etab['nom']; ?>" name="etab">
                     <?= $etab['nom']; ?></option>
                     <?php endforeach; ?>

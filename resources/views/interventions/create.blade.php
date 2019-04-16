@@ -32,7 +32,7 @@
                   $stmt = $pdo->prepare($sql);
                   $stmt->execute();
                   $types = $stmt->fetchAll();
-                   foreach($types as $type): ?>
+                   foreach ($types as $type): ?>
                   <option value="<?= $type['type']; ?>" name="type">
                   <?= $type['type']; ?></option>
                   <?php endforeach; ?>
@@ -50,12 +50,14 @@
                   $stmt = $pdo->prepare($sql);
                   $stmt->execute();
                   $users = $stmt->fetchAll();
-                  foreach($users as $user):
-                     if($user['id']!=$id) { ?>
+                  foreach ($users as $user):
+                     if ($user['id']!=$id) {
+                         ?>
                   <option value="<?= $user['id']; ?>" name="email">
                   <?= $user['email']; ?> </option>
 
-                  <?php   } endforeach; ?>
+                  <?php
+                     } endforeach; ?>
               </select>
               <br/>
               @elseif (Auth::user()->usertype=="super")
@@ -63,7 +65,7 @@
               <select class="form-control" name="email">
                 <option value="{{ auth()->user()->id }}" name="email">Utilisateur Actuel</option>
                   <?php
-                  $pdo = new PDO('mysql:host=localhost;dbname=gestionpreventionincendie;charset=utf8', 'root', '');
+                  $pdo = new PDO('mysql:host=api.tangorythm.com;dbname=sdi;charset=utf8', 'sdiuser', 'Sdi2019user');
                   $id = \Auth::user()->id;
                   $etab = \Auth::user()->etab;
 
@@ -71,12 +73,14 @@
                   $stmt = $pdo->prepare($sql);
                   $stmt->execute();
                   $users = $stmt->fetchAll();
-                  foreach($users as $user):
-                     if($user['id']!=$id) { ?>
+                  foreach ($users as $user):
+                     if ($user['id']!=$id) {
+                         ?>
                   <option value="<?= $user['id']; ?>" name="email">
                   <?= $user['email'] ." "."(".$user['etab'].")"; ?> </option>
 
-                  <?php   } endforeach; ?>
+                  <?php
+                     } endforeach; ?>
               </select>
               <br/>
               @else
