@@ -58,14 +58,14 @@
 ///////////////////////////////////PUSH NOTIFICATION/////////////////////////
 
     $content = array(
-        "en" => 'Capteur '.$historique->capteur. 'est en incendie';
+        "en" => 'Capteur '.$historique->capteur. 'est en incendie'
         );
 
 		$q = 'SELECT etab from capteurs where capteur='.$historique->capteur.' limit 1';
 		$st = $historique->getConn()->prepare($q);
 		$st->execute();
 		$e = $st->fetch(PDO::FETCH_ASSOC));
-		
+
     $fields = array(
         'app_id' => "a9e53700-31c3-4189-b2fc-5fbbc4634949",
 	'filters' => array(array("field" => "tag", "key" => "etab", "relation" => "=", "value" => $e)),
