@@ -66,9 +66,15 @@
 		$st->execute();
 		$e = $st->fetch(PDO::FETCH_ASSOC);
 
+    $ourouru = 'SELECT id from etablissements where nom like '.$e['etab']. 'limit 1';
+    $oro = $historique->getConn()->prepare($q);
+    $oro->execute();
+    $ror=$oro->fetch(PDO::FETCH_ASSOC);
+
+
     $fields = array(
         'app_id' => "a9e53700-31c3-4189-b2fc-5fbbc4634949",
-	'filters' => array(array("field" => "tag", "key" => "etab", "relation" => "=", "value" => $e['etab'])),
+	      'filters' => array(array("field" => "tag", "key" => "etab", "relation" => "=", "value" => $ror['etab'])),
         'data' => array("foo" => "bar"),
         'large_icon' =>"ic_launcher_round.png",
         'contents' => $content
