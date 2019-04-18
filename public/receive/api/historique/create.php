@@ -67,7 +67,7 @@
 		$e = $st->fetch(PDO::FETCH_ASSOC);
 
 echo "BONSOIIRRRRRRR".$e['etab'];
-    $ourouru = 'SELECT id from etablissements where nom like " '.$e['etab'].' " limit 1';
+    $ourouru = 'SELECT id from etablissements where nom like "'.$e['etab'].'" limit 1';
     $oro = $historique->getConn()->prepare($ourouru);
     $oro->execute();
     $ror=$oro->fetch(PDO::FETCH_ASSOC);
