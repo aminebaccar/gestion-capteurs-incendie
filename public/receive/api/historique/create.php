@@ -71,6 +71,7 @@
     $oro->execute();
     $ror=$oro->fetch(PDO::FETCH_ASSOC);
 
+echo "BONJOUUUUUUUUUUUUUR".$ror['id'];
 
     $fields = array(
         'app_id' => "a9e53700-31c3-4189-b2fc-5fbbc4634949",
