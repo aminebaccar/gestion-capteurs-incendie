@@ -58,7 +58,7 @@
 ///////////////////////////////////PUSH NOTIFICATION/////////////////////////
 
     $content = array(
-        "en" => 'Capteur '.$historique->capteur. 'est en incendie'
+        "en" => 'Capteur '.$historique->capteur. ' est en incendie'
         );
 
 		$q = 'SELECT etab from capteurs where code_capteur='.$historique->capteur.' limit 1';
@@ -66,13 +66,13 @@
 		$st->execute();
 		$e = $st->fetch(PDO::FETCH_ASSOC);
 
-echo "BONSOIIRRRRRRR".$e['etab'];
+
     $ourouru = 'SELECT id from etablissements where nom like "'.$e['etab'].'" limit 1';
     $oro = $historique->getConn()->prepare($ourouru);
     $oro->execute();
     $ror=$oro->fetch(PDO::FETCH_ASSOC);
 
-echo "BONJOUUUUUUUUUUUUUR".$ror['id'];
+
 
     $fields = array(
         'app_id' => "a9e53700-31c3-4189-b2fc-5fbbc4634949",
