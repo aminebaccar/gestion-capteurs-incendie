@@ -61,7 +61,7 @@
         "en" => 'Capteur '.$historique->capteur. 'est en incendie'
         );
 
-		$q = 'SELECT etab from capteurs where capteur='.$historique->capteur.' limit 1';
+		$q = 'SELECT etab from capteurs where code_capteur='.$historique->capteur.' limit 1';
 		$st = $historique->getConn()->prepare($q);
 		$st->execute();
 		$e = $st->fetch(PDO::FETCH_ASSOC);
