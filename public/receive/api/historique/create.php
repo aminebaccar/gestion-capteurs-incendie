@@ -74,7 +74,7 @@
 
     $fields = array(
         'app_id' => "a9e53700-31c3-4189-b2fc-5fbbc4634949",
-	      'filters' => array(array("field" => "tag", "key" => "etab", "relation" => "=", "value" => $ror['etab'])),
+	      'filters' => array(array("field" => "tag", "key" => "etab", "relation" => "=", "value" => $ror['id'])),
         'data' => array("foo" => "bar"),
         'large_icon' =>"ic_launcher_round.png",
         'contents' => $content
