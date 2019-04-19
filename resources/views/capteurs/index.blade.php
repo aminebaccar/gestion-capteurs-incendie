@@ -1,5 +1,7 @@
 @extends('layouts.app')
-<?php use App\Capteur;?>
+<?php use App\Capteur;
+
+?>
 @section('content')
 <style>
   .uper {
@@ -53,11 +55,10 @@
                         @foreach($capteurs as $capteur)
                         <?php
                         $c = Capteur::find($capteur['parent']);
-                        if($c['type']=="capteur"){
-                          $etab = $c['etab'];
-                        }
-                        else {
-                          $etab = $capteur['etab'];
+                        if ($c['type']=="capteur") {
+                            $etab = $c['etab'];
+                        } else {
+                            $etab = $capteur['etab'];
                         }
 
                           ?>
@@ -87,6 +88,24 @@
                         </tr>
                         @endif
                         @endforeach
+                        <tr data-toggle="collapse" data-target=".order1">
+         <td>+</td>
+         <td>1001</td>
+         <td>9/29/2016</td>
+         <td>$126.27</td>
+       </tr>
+       <tr class="collapse order1">
+         <td>1</td>
+         <td></td>
+         <td>Shirt</td>
+         <td>$12.27</td>
+       </tr>
+       <tr class="collapse order1">
+         <td>1</td>
+         <td></td>
+         <td>Shoes</td>
+         <td>$62.27</td>
+       </tr>
                       </tbody>
                     </table>
                   </div>
