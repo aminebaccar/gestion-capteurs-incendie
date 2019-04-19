@@ -101,8 +101,8 @@
          <td>$12.27</td>
        </tr>
        <tr class="collapse order1">
-         <td>1</td>
          <td></td>
+         <td>1</td>
          <td>Shoes</td>
          <td>$62.27</td>
        </tr>
