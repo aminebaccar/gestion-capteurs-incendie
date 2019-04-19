@@ -149,7 +149,7 @@ outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></butt
 
                     @foreach($capteurs as $cpt)
                     @if ($cpt['parent']==$q)
-                    <tr class="collapse order{{$i-1}}">
+                    <tr class="collapse order{{$i}}">
                       <td></td>
                       <td class="w-1">{{$cpt->id}}</td>
                       <td>{{$cpt->code_capteur}}</td>
@@ -168,7 +168,7 @@ outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></butt
                     </tr>
                     @endif
                     @endforeach
-@endif
+                    @endif
                     @endforeach
                   </tbody>
                 </table>
