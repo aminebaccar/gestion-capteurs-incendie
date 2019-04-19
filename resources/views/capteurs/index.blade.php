@@ -88,7 +88,7 @@
                         </tr>
                         @endif
                         @endforeach
-                        <tr data-toggle="collapse" data-target=".order1">
+                        <tr data-toggle="collapse" data-target=".order1" style="cursor:pointer;">
          <td>+</td>
          <td>1001</td>
          <td>9/29/2016</td>
