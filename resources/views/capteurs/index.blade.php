@@ -143,6 +143,7 @@ outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></butt
                       </td>
                     </tr>
                     @endif
+
                     @foreach($capteurs as $cpt)
                     @if ($cpt['parent']==$q)
                     <tr class="collapse order1">
@@ -161,8 +162,9 @@ cursor: pointer;
 outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></button>
 </form></td>
                     </tr>
-                    @endforeach
                     @endif
+                    @endforeach
+
                     @endforeach
 
 
