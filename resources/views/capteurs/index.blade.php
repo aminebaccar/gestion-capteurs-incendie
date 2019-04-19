@@ -162,6 +162,8 @@ outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></butt
 </form></td>
                     </tr>
                     @endforeach
+                    @endif
+                    @endforeach
 
 
                     <tr data-toggle="collapse" data-target=".order1" style="cursor:pointer;">
