@@ -103,7 +103,7 @@
 width: 100%;
 padding: 10px;" >
                   <thead>
-                    <tr data-toggle="collapse" data-target=".order1" style="cursor:pointer;">
+                    <tr>
                     @if(Auth::user()->usertype == "super")  <th class="w-1">ID.</th> @endif
                       <th>Groupe</th>
                     @if (Auth::user()->usertype == "super") <th> Établissement</th> @endif
@@ -122,7 +122,7 @@ padding: 10px;" >
 
                       ?>
                     @if((Auth::user()->etab==$capteur->etab || Auth::user()->usertype=="super") && $capteur['type']=="groupe")
-                    <tr>
+                    <tr data-toggle="collapse" data-target=".order1" style="cursor:pointer;">
                     @if(Auth::user()->usertype == "super")   <td><span class="text-muted">{{$capteur->id}}</span></td> @endif
                       <td>{{$capteur->code_capteur}}</td>
                 @if (Auth::user()->usertype == "super")  <td> {{$etab}}</td>@endif
