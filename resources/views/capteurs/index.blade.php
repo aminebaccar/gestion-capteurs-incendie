@@ -111,6 +111,7 @@ padding: 10px;" >
                     </tr>
                   </thead>
                   <tbody>
+                    <?php $i = 0; ?>
                     @foreach($capteurs as $capteur)
                     <?php
                     $c = Capteur::find($capteur['parent']);
@@ -120,9 +121,10 @@ padding: 10px;" >
                         $etab = $capteur['etab'];
                     }
                     $q = $capteur['code_capteur'];
+                    $i++;
                       ?>
                     @if((Auth::user()->etab==$capteur->etab || Auth::user()->usertype=="super") && $capteur['type']=="groupe")
-                    <tr data-toggle="collapse" data-target=".order1" style="cursor:pointer;">
+                    <tr data-toggle="collapse" data-target=".order{{$i}}" style="cursor:pointer;">
                     @if(Auth::user()->usertype == "super")   <td><span class="text-muted">{{$capteur->id}}</span></td> @endif
                       <td>{{$capteur->code_capteur}}</td>
                 @if (Auth::user()->usertype == "super")  <td> {{$etab}}</td>@endif
@@ -146,7 +148,7 @@ outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></butt
 
                     @foreach($capteurs as $cpt)
                     @if ($cpt['parent']==$q)
-                    <tr class="collapse order1">
+                    <tr class="collapse order{{$i}}">
                       <td></td>
                       <td class="w-1">{{$cpt->id}}</td>
                       <td>{{$cpt->code_capteur}}</td>
