@@ -88,36 +88,15 @@
                         </tr>
                         @endif
                         @endforeach
-
-
-                        <tr data-toggle="collapse" data-target=".order1" style="cursor:pointer;">
-         <td>+</td>
-         <td>1001</td>
-         <td>9/29/2016</td>
-         <td>$126.27</td>
-       </tr>
-       <tr class="collapse order1">
-         <th></th>
-         <th>1</th>
-         <th>2</th>
-         <th>3</th>
-       <tr class="collapse order1">
-         <td></td>
-         <td>1</td>
-         <td>Shirt</td>
-         <td>$12.27</td>
-       </tr>
-       <tr class="collapse order1">
-         <td></td>
-         <td>1</td>
-         <td>Shoes</td>
-         <td>$62.27</td>
-       </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
+
+              <!-- *******************-TESTIING*******************- -->
+
+
               <div class="table-responsive">
                 <div class="container">
                 <table id="id" class="table card-table table-vcenter text-nowrap" style="margin: auto;
