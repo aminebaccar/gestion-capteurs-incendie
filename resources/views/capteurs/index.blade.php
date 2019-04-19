@@ -147,10 +147,11 @@ outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></butt
                     @foreach($capteurs as $cpt)
                     @if ($cpt['parent']==$q)
                     <tr class="collapse order1">
-                      <td>{{$cpt->id}}</td>
+                      <td></td>
+                      <td class="w-1">{{$cpt->id}}</td>
                       <td>{{$cpt->code_capteur}}</td>
                       <td>{{$cpt->etat}}</td>
-                      <td><form action="{{ route('capteurs.destroy', $capteur->id) }}" method="POST">
+                      <td><form action="{{ route('capteurs.destroy', $cpt->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
 <button type='submit' class="btn btn-danger" style="	background: none;
