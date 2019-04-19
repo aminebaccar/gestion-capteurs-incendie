@@ -105,8 +105,7 @@ padding: 10px;" >
                   <thead>
                     <tr>
                     @if(Auth::user()->usertype == "super")  <th class="w-1">ID.</th> @endif
-                      <th>Code Capteur</th>
-                      <th>État</th>
+                      <th>Groupe</th>
                     @if (Auth::user()->usertype == "super") <th> Établissement</th> @endif
                       <th>Groupe</th>
                       <th></th>
@@ -123,7 +122,7 @@ padding: 10px;" >
                     }
 
                       ?>
-                    @if((Auth::user()->etab==$capteur->etab || Auth::user()->usertype=="super") && $capteur['type']=="capteur")
+                    @if((Auth::user()->etab==$capteur->etab || Auth::user()->usertype=="super") && $capteur['type']=="groupe")
                     <tr>
                     @if(Auth::user()->usertype == "super")   <td><span class="text-muted">{{$capteur->id}}</span></td> @endif
                       <td>{{$capteur->code_capteur}}</td>
