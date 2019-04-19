@@ -119,7 +119,7 @@ padding: 10px;" >
                     } else {
                         $etab = $capteur['etab'];
                     }
-
+                    $q = $capteur['code_capteur'];
                       ?>
                     @if((Auth::user()->etab==$capteur->etab || Auth::user()->usertype=="super") && $capteur['type']=="groupe")
                     <tr data-toggle="collapse" data-target=".order1" style="cursor:pointer;">
@@ -143,6 +143,24 @@ outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></butt
                       </td>
                     </tr>
                     @endif
+                    @foreach($capteurs as $cpt)
+                    @if ($cpt['parent']==$q)
+                    <tr class="collapse order1">
+                      <td>{{$cpt->id}}</td>
+                      <td>{{$cpt->code_capteur}}</td>
+                      <td>{{$cpt->etat}}</td>
+                      <td><form action="{{ route('capteurs.destroy', $capteur->id) }}" method="POST">
+{{ method_field('DELETE') }}
+{{ csrf_field() }}
+<button type='submit' class="btn btn-danger" style="	background: none;
+color: #9aa0ac;
+border: none;
+padding: 0;
+font: inherit;
+cursor: pointer;
+outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></button>
+</form></td>
+                    </tr>
                     @endforeach
 
 
