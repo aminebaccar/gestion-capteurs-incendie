@@ -96,7 +96,7 @@
          <td>9/29/2016</td>
          <td>$126.27</td>
        </tr>
-       <tr>
+       <tr class="collapse order1">
          <th></th>
          <th>1</th>
          <th>2</th>
