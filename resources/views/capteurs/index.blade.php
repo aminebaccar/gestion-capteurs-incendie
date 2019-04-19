@@ -125,9 +125,6 @@ padding: 10px;" >
                     <tr>
                     @if(Auth::user()->usertype == "super")   <td><span class="text-muted">{{$capteur->id}}</span></td> @endif
                       <td>{{$capteur->code_capteur}}</td>
-                      <td>
-                        {{$capteur->etat}}
-                      </td>
                 @if (Auth::user()->usertype == "super")  <td> {{$etab}}</td>@endif
                 <td>{{$c['code_capteur']}}</td>
 
