@@ -121,9 +121,10 @@ padding: 10px;" >
                         $etab = $capteur['etab'];
                     }
                     $q = $capteur['code_capteur'];
-                    $i++;
+
                       ?>
                     @if((Auth::user()->etab==$capteur->etab || Auth::user()->usertype=="super") && $capteur['type']=="groupe")
+                    @php $i++; @endphp
                     <tr data-toggle="collapse" data-target=".order{{$i}}" style="cursor:pointer;">
                     @if(Auth::user()->usertype == "super")   <td><span class="text-muted">{{$capteur->id}}</span></td> @endif
                       <td>{{$capteur->code_capteur}}</td>
