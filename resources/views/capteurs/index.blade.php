@@ -126,7 +126,7 @@ padding: 10px;" >
                     @if(Auth::user()->usertype == "super")   <td><span class="text-muted">{{$capteur->id}}</span></td> @endif
                       <td>{{$capteur->code_capteur}}</td>
                 @if (Auth::user()->usertype == "super")  <td> {{$etab}}</td>@endif
-                <td>{{$c['code_capteur']}}</td>
+                
 
                       <td>
                         <form action="{{ route('capteurs.destroy', $capteur->id) }}" method="POST">
