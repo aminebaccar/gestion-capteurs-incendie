@@ -167,9 +167,8 @@ outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></butt
 </form></td>
                     </tr>
                     @endif
-                    @endif
                     @endforeach
-
+@endif
                     @endforeach
                   </tbody>
                 </table>
