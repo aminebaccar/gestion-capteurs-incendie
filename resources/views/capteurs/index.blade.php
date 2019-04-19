@@ -107,7 +107,6 @@ padding: 10px;" >
                     @if(Auth::user()->usertype == "super")  <th class="w-1">ID.</th> @endif
                       <th>Groupe</th>
                     @if (Auth::user()->usertype == "super") <th> Établissement</th> @endif
-                      <th>Groupe</th>
                       <th></th>
                     </tr>
                   </thead>
