@@ -111,7 +111,7 @@ padding: 10px;" >
                     </tr>
                   </thead>
                   <tbody>
-                    <?php $i = 1; ?>
+                    <?php $i = 0; ?>
                     @foreach($capteurs as $capteur)
                     <?php
                     $c = Capteur::find($capteur['parent']);
