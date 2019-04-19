@@ -120,7 +120,7 @@ padding: 10px;" >
                     } else {
                         $etab = $capteur['etab'];
                     }
-                    $q = $capteur['code_capteur'];
+                    $q = $capteur['id'];
 
                       ?>
                     @if((Auth::user()->etab==$capteur->etab || Auth::user()->usertype=="super") && $capteur['type']=="groupe")
