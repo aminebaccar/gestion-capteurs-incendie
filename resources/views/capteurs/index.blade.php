@@ -36,6 +36,7 @@
     <span class="float-right" ><a href="capteurs/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Capteur +</a>
     </span></p>
   </div>
+  <!--
                   <div class="table-responsive">
                     <div class="container">
                     <table id="id" class="table card-table table-vcenter text-nowrap" style="margin: auto;
@@ -93,7 +94,7 @@
                   </div>
                 </div>
               </div>
-
+-->
               <!-- *******************-TESTIING*******************- -->
 
 
@@ -129,7 +130,7 @@ padding: 10px;" >
                     @if(Auth::user()->usertype == "super")   <td><span class="text-muted">{{$capteur->id}}</span></td> @endif
                       <td>{{$capteur->code_capteur}}</td>
                 @if (Auth::user()->usertype == "super")  <td> {{$etab}}</td>@endif
-                  <td></td>
+
 
                       <td>
                         <form action="{{ route('capteurs.destroy', $capteur->id) }}" method="POST">
