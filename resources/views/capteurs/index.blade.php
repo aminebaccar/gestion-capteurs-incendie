@@ -166,13 +166,14 @@ cursor: pointer;
 outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></button>
 </form></td>
                     </tr>
+
+                    @endif
                     <tr class="collapse order1">
           <td>1</td>
           <td></td>
           <td>Shirt</td>
           <td>$12.27</td>
         </tr>
-                    @endif
                     @endforeach
                     @endif
                     @endforeach
