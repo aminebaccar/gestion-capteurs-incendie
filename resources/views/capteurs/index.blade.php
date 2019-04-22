@@ -80,10 +80,9 @@ $(document).ready(function() {
                           <td>
                             {{$capteur->etat}}
                           </td>
-                    @if (Auth::user()->usertype == "super")  <td> {{$etab}}</td>
-                    <td>Groupe {{$c['code_capteur']}} ({{$etab}})</td>
-                    @else <td>Groupe {{$c['code_capteur']}}</td>
-                    @endif
+                    @if (Auth::user()->usertype == "super")  <td> {{$etab}}</td>@endif
+                    @if (Auth::user()->usertype == "super") <td>Groupe {{$c['code_capteur']}} ({{$etab}})</td>
+                    @else <td>Groupe {{$c['code_capteur']}}</td> @endif
 
                           <td>
                             <form action="{{ route('capteurs.destroy', $capteur->id) }}" method="POST">
