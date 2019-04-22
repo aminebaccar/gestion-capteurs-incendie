@@ -29,10 +29,10 @@ $(document).ready(function() {
       order: [[4, 'asc']],
       rowGroup: {
           dataSrc: 4
-      }
+      },
       "columnDefs": [
             {
-                "targets": [ 4 ],
+                "targets": [ 2 ],
                 "visible": false,
                 "searchable": false
             }
