@@ -23,6 +23,17 @@
 
 </style>
 
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#example').DataTable( {
+      order: [[4, 'asc']],
+      rowGroup: {
+          dataSrc: 4
+      }
+  } );
+} );
+</script>
+
 <div class="uper">
   @if(session()->get('success'))
     <div class="alert alert-success">
@@ -38,7 +49,7 @@
   </div>
                   <div class="table-responsive">
                     <div class="container">
-                    <table id="id" class="table card-table table-vcenter text-nowrap" style="margin: auto;
+                    <table id="example" class="table card-table table-vcenter text-nowrap" style="margin: auto;
   width: 100%;
   padding: 10px;" >
                       <thead>
