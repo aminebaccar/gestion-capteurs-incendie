@@ -36,7 +36,6 @@
     <span class="float-right" ><a href="capteurs/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Capteur +</a>
     </span></p>
   </div>
-  <!--
                   <div class="table-responsive">
                     <div class="container">
                     <table id="id" class="table card-table table-vcenter text-nowrap" style="margin: auto;
@@ -94,7 +93,7 @@
                   </div>
                 </div>
               </div>
--->
+
               <!-- *******************-TESTIING*******************-
 
 
