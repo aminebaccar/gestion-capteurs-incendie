@@ -81,7 +81,7 @@ $(document).ready(function() {
                             {{$capteur->etat}}
                           </td>
                     @if (Auth::user()->usertype == "super")  <td> {{$etab}}</td>@endif
-                    <td>{{$c['code_capteur']}}</td>
+                    <td>Groupe {{$c['code_capteur']}}</td>
 
                           <td>
                             <form action="{{ route('capteurs.destroy', $capteur->id) }}" method="POST">
