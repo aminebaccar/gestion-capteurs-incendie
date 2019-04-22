@@ -95,7 +95,7 @@
                 </div>
               </div>
 -->
-              <!-- *******************-TESTIING*******************- -->
+              <!-- *******************-TESTIING*******************-
 
 
               <div class="table-responsive">
@@ -177,4 +177,5 @@ outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></butt
               </div>
             </div>
           </div>
+          -->
 @endsection
