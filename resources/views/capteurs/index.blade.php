@@ -30,6 +30,12 @@ $(document).ready(function() {
       rowGroup: {
           dataSrc: 4
       }
+      "columnDefs": [
+            {
+                "targets": [ 4 ],
+                "visible": false,
+                "searchable": false
+            }
   } );
 } );
 </script>
