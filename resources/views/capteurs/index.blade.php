@@ -84,9 +84,11 @@ $(document).ready(function() {
 
                     @if ($c['code_capteur']!="")
 
-                    @if (Auth::user()->usertype == "super") <td>Groupe {{$c['code_capteur']}} ({{$etab}})</td>
-                    @else <td>Groupe {{$c['code_capteur']}}</td> @endif
+                      @if (Auth::user()->usertype == "super") <td>Groupe {{$c['code_capteur']}} ({{$etab}})</td>
+                      @else <td>Groupe {{$c['code_capteur']}}</td> @endif
 
+                    @else
+                    <td></td>
                     @endif
 
                           <td>
