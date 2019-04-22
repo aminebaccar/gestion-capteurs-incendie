@@ -30,11 +30,12 @@
                           <th>Evenement</th>
                           <th>Date</th>
                           <th>Capteur</th>
-
+                        @if($s['usertype']=="super")  <th>Etablissement</th> @endif
                           <th></th>
                         </tr>
                       </thead>
                       <tbody>
+
                         @foreach($historiques as $historique)
                         <?php $capteur = Capteur::find($historique->capteur);?>
                         @if($s['etab']==$capteur['etab'] || $s['usertype']=="super" )
@@ -47,6 +48,7 @@
                           <td>
                             {{$historique->capteur}}
                           </td>
+                          <td> {{$capteur['etab']}} </td>
                         <td>
                           <a class="icon" href="{{ route('alertes.consulte',$historique->id)}}"><button class="btn btn-danger"><i class="fe fe-check"></i></button></a>
                         </td>
