@@ -25,12 +25,13 @@
   @php
     $current_usertype = Auth::user()->usertype;
   @endphp
+  <script type="text/javascript">
+  var c = <?php echo $current_usertype ?>;
+  var row;
+  if(c == "super") {row = 4;} else {row = 2;}
+  console.log("ROW BROW: "+row);
+  </script>
 <script type="text/javascript">
-
-var c = <?php echo $current_usertype ?>;
-var row;
-if(c == "super") {row = 4;} else {row = 2;}
-console.log("ROW BROW: "+row);
 
 $(document).ready(function() {
   $('#example').DataTable( {
