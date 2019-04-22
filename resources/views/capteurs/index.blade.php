@@ -22,17 +22,22 @@
 }
 
 </style>
-
+  @php
+    $current_usertype = App\Auth::user()->usertype;
+  @endphp
 <script type="text/javascript">
 $(document).ready(function() {
   $('#example').DataTable( {
-      order: [[4, 'asc']],
+    var c = <?php echo $current_usertype ?>;
+    var row;
+    if(c == "super") row = 4; else row = 2;
+      order: [[row, 'asc']],
       rowGroup: {
-          dataSrc: 4
+          dataSrc: row
       },
       "columnDefs": [
             {
-                "targets": [ 4 ],
+                "targets": [ row ],
                 "visible": false,
                 "searchable": false
             }
@@ -84,9 +89,7 @@ $(document).ready(function() {
                         <tr>
                         @if(Auth::user()->usertype == "super")   <td><span class="text-muted">{{$capteur->id}}</span></td> @endif
                           <td>{{$capteur->code_capteur}}</td>
-                          <td>
-                            {{$capteur->etat}}
-                          </td>
+                          <td>{{$capteur->etat}}</td>
                         @if (Auth::user()->usertype == "super")  <td> {{$etab}}</td>@endif
 
                     @if ($c['code_capteur']!="")
