@@ -23,7 +23,7 @@
 
 </style>
   @php
-    $current_usertype = App\Auth::user()->usertype;
+    $current_usertype = Auth::user()->usertype;
   @endphp
 <script type="text/javascript">
 $(document).ready(function() {
