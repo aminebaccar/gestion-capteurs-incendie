@@ -31,6 +31,7 @@ $(document).ready(function() {
     var c = <?php echo $current_usertype ?>;
     var row;
     if(c == "super") row = 4; else row = 2;
+    console.log(row);
       order: [[row, 'asc']],
       rowGroup: {
           dataSrc: row
