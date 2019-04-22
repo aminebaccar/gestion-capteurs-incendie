@@ -32,7 +32,7 @@ $(document).ready(function() {
       },
       "columnDefs": [
             {
-                "targets": [ 2 ],
+                "targets": [ 4 ],
                 "visible": false,
                 "searchable": false
             }
