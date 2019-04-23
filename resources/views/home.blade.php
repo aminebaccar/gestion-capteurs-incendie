@@ -25,7 +25,7 @@ use \App\Intervention; ?>
       <div class="card">
       <div class="card-body text-center">
                 <div class="h5">Montant à payer</div>
-                <div class="display-4 font-weight-bold mb-4">{{ $price = DB::table('factures')->sum('montant') }} DT </div>
+                <div class="display-4 font-weight-bold mb-4">{{ $price = DB::table('factures')->where('etab', 'like', Auth::user()->etab)->sum('montant') }} DT </div>
               </div></a>
             </div>
     </div>
