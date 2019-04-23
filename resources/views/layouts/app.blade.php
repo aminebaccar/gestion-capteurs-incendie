@@ -175,7 +175,7 @@
                                 </li>
                                 @else
                                 <li class="nav-item dropdown">
-                                     <a href="/interventions/create" class="nav-link"><i class="fe fe-file"></i> Interventions</a>
+                                     <a href="/interventions" class="nav-link"><i class="fe fe-file"></i> Interventions</a>
                                 </li>
                                 @endif
                               @if(Auth::user()->usertype=="super" || Auth::user()->usertype=="admin")
