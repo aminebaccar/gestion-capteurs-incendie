@@ -9,6 +9,7 @@ class Capteur extends Model
   protected $fillable = [
   'code_capteur',
   'etat',
-  'etab'
+  'etab',
+  'type'
 ];
 }
