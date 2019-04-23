@@ -1,5 +1,6 @@
 @extends('layouts.app')
-<?php use App\Capteur;?>
+<?php use App\Capteur;
+use App\User;?>
 @section('content')
 <style>
   .uper {
