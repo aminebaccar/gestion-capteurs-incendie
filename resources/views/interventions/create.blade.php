@@ -60,7 +60,7 @@
                  <?php endforeach; ?>
 
                 ?>
-              </select>
+              </select><br/>
               @if (Auth::user()->usertype=="admin" )
               <label for="name">Intervenant:</label>
               <select class="form-control" name="email">
