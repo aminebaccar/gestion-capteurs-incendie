@@ -46,7 +46,7 @@ class InterventionController extends Controller
       'type' => $request->get('type'),
       'commentaire' => $request->get('commentaire'),
       'user' => $request->get('email'),
-      'capteur' => $request->('capteur')
+      'capteur' => $request->get('capteur')
     ]);
 
     $intervention->save();
