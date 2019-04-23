@@ -42,7 +42,7 @@
                   <?php endforeach; ?>
               </select><br/>
               <label for="name">Capteur:</label>
-              <select class="form-control" name="type">
+              <select class="form-control" name="capteur">
                 <?php
                   $pdo = new PDO('mysql:host=api.tangorythm.com;dbname=sdi', 'sdiuser', 'Sdi2019user');
                   if (\Auth::user()->usertype!="super") {
