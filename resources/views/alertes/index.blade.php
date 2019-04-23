@@ -48,7 +48,7 @@
                           <td>
                             {{$historique->capteur}}
                           </td>
-                          <td> {{$capteur['etab']}} </td>
+                          @if($s['usertype']=="super") <td> {{$capteur['etab']}} </td> @endif
                         <td>
                           <a class="icon" href="{{ route('alertes.consulte',$historique->id)}}"><button class="btn btn-danger"><i class="fe fe-check"></i></button></a>
                         </td>
