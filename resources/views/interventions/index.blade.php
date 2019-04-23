@@ -35,7 +35,7 @@
                           <th>Type Intervention</th>
                           <th>Commentaire</th>
                           <th>Date</th>
-                          <th>Utilisateur</th>
+                        @if(Auth::user()->usertype!="normal")  <th>Utilisateur</th>@endif
                           @if(Auth::user()->usertype=="super")<th>Établissement</th>@endif
                         </tr>
                       </thead>
@@ -51,11 +51,13 @@
                           <td>
                             {{$intervention->created_at}}
                           </td>
-                        @if(Auth::user()->usertype=="admin")  <td>
+                          @if(Auth::user()->usertype=="admin")<td>
                             {{$user['email']}}
-                          </td> @else if (Auth::user()->usertype=="super")
+                          </td>
+                          @else if (Auth::user()->usertype=="super")
                           <td> {{$user['email']}} ({{$user['etab']}}) </td>
                           @endif
+
                           @if(Auth::user()->usertype=="super")
                           <td>
                             {{$user['etab']}}
