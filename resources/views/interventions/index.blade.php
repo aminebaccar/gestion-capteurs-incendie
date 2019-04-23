@@ -43,6 +43,7 @@
                         @foreach($interventions as $intervention)
                         <?php $user = User::find($intervention->user); ?>
                         @if(Auth::user()->etab == $user['etab'] || Auth::user()->usertype=="super" )
+                        @if(Auth::user()==$user && Auth::user()->usertype="normal")
                         <tr>
                         @if(Auth::user()->usertype=="super")  <td><span class="text-muted">{{$intervention->id}}</span></td>@endif
                           <td>{{$intervention->type}}</td>
@@ -59,6 +60,7 @@
                           </td>
                           @endif
                         </tr>
+                        @endif
                         @endif
                         @endforeach
                       </tbody>
