@@ -47,7 +47,7 @@
                   if (\Auth::user()->usertype!="super") {
                       $sql = "SELECT * FROM capteurs where etab like ".\Auth::user()->etab." and type like 'capteur'";
                   } else {
-                      $sql = "SELECT * FROM capteurs where type like 'capteurs'";
+                      $sql = "SELECT * FROM capteurs where type like 'capteur'";
                   }
                   $stmt = $pdo->prepare($sql);
                   $stmt->execute();
