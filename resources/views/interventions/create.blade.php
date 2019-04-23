@@ -41,6 +41,7 @@
                   <?= $type['type']; ?></option>
                   <?php endforeach; ?>
               </select><br/>
+              <label for="name">Capteur:</label>
               <select class="form-control" name="type">
                 <?php
                   $pdo = new PDO('mysql:host=api.tangorythm.com;dbname=sdi', 'sdiuser', 'Sdi2019user');
