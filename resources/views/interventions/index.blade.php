@@ -54,7 +54,7 @@
                           @if(Auth::user()->usertype=="admin"||Auth::user()->usertype=="super")<td>
                             {{$user['email']}}
                           </td>
-                          <td> {{$user['email']}} ({{$user['etab']}}) </td>
+                          
                           @endif
 
                           @if(Auth::user()->usertype=="super")
