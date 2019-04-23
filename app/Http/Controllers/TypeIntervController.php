@@ -42,7 +42,8 @@ class TypeIntervController extends Controller
     ]);
 
     $type_interv = new TypeInterv([
-      'type' => $request->get('type')
+      'type' => $request->get('type'),
+      'etab' => $request->get('type')
     ]);
 
     $type_interv->save();
