@@ -54,7 +54,7 @@
                   $cpts = $stmt->fetchAll();
                   foreach ($cpts as $cpt):
                      ?>
-                 <option value="<?= $cpts['id']; ?>" name="capteur">
+                 <option value="<?= $cpt['id']; ?>" name="capteur">
                  <?= $cpt['code_capteur']; ?></option>
                  <?php endforeach; ?>
 
