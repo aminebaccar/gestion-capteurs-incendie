@@ -22,26 +22,37 @@
 }
 
 </style>
-  @php
-    $current_usertype = Auth::user()->usertype;
-  @endphp
-  <script type="text/javascript">
-  var c = <?php echo $current_usertype ?>;
-  var row;
-  if(c == "super") {row = 4;} else {row = 2;}
-  console.log("ROW BROW: "+row);
-  </script>
+  @if (Auth::user()->usertype=="super")
 <script type="text/javascript">
 
 $(document).ready(function() {
   $('#example').DataTable( {
-      order: [[row, 'asc']],
+      order: [[4, 'asc']],
       rowGroup: {
-          dataSrc: row
+          dataSrc: 4
       },
       "columnDefs": [
             {
-                "targets": [ row ],
+                "targets": [ 4 ],
+                "visible": false,
+                "searchable": false
+            }
+             ]
+  } );
+} );
+</script>
+@else
+<script type="text/javascript">
+
+$(document).ready(function() {
+  $('#example').DataTable( {
+      order: [[2, 'asc']],
+      rowGroup: {
+          dataSrc: 2
+      },
+      "columnDefs": [
+            {
+                "targets": [ 2 ],
                 "visible": false,
                 "searchable": false
             }
