@@ -55,6 +55,7 @@
                             {{$user['email']}}
                           </td> @else
                           <td> {{$user['email']}} ({{$user['etab']}}) </td>
+                          @endif
                           @if(Auth::user()->usertype=="super")
                           <td>
                             {{$user['etab']}}
