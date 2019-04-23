@@ -51,10 +51,9 @@
                           <td>
                             {{$intervention->created_at}}
                           </td>
-                          @if(Auth::user()->usertype=="admin")<td>
+                          @if(Auth::user()->usertype=="admin"||Auth::user()->usertype=="super")<td>
                             {{$user['email']}}
                           </td>
-                          @elseif (Auth::user()->usertype=="super")
                           <td> {{$user['email']}} ({{$user['etab']}}) </td>
                           @endif
 
