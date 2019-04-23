@@ -41,6 +41,25 @@
                   <?= $type['type']; ?></option>
                   <?php endforeach; ?>
               </select><br/>
+              <select class="form-control" name="type">
+                <?php
+                  $pdo = new PDO('mysql:host=api.tangorythm.com;dbname=sdi', 'sdiuser', 'Sdi2019user');
+                  if (\Auth::user()->usertype!="super") {
+                      $sql = "SELECT * FROM capteurs where etab like ".\Auth::user()->etab." and type like 'capteur'";
+                  } else {
+                      $sql = "SELECT * FROM capteurs where type like 'capteurs'";
+                  }
+                  $stmt = $pdo->prepare($sql);
+                  $stmt->execute();
+                  $cpts = $stmt->fetchAll();
+                  foreach ($cpts as $cpt):
+                     ?>
+                 <option value="<?= $cpts['id']; ?>" name="capteur">
+                 <?= $cpt['code_capteur']; ?></option>
+                 <?php endforeach; ?>
+
+                ?>
+              </select>
               @if (Auth::user()->usertype=="admin" )
               <label for="name">Intervenant:</label>
               <select class="form-control" name="email">
