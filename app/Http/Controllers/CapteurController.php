@@ -38,7 +38,7 @@ class CapteurController extends Controller
     public function store(Request $request)
     {
       $request->validate([
-      'code_capteur'=>'required|integer',
+      'code_capteur'=>'required',
       'etab' => 'required'
     ]);
 
