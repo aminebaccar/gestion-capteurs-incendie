@@ -25,7 +25,11 @@ use \App\Intervention; ?>
       <div class="card">
       <div class="card-body text-center">
                 <div class="h5">Montant à payer</div>
-                @if (Auth:user()->usertype!="normal")<div class="display-4 font-weight-bold mb-4">{{ $price = DB::table('factures')->where('etab', 'like', Auth::user()->etab)->sum('montant') }} DT </div> @endif
+                @if (Auth:user()->usertype=="admin")
+                <div class="display-4 font-weight-bold mb-4">{{ $price = DB::table('factures')->where('etab', 'like', Auth::user()->etab)->sum('montant') }} DT </div>
+                @elseif (Auth::user()->usertype=="super")
+                <div class="display-4 font-weight-bold mb-4">{{ $price = DB::table('factures')->sum('montant') }} DT </div> 
+                @endif
               </div></a>
             </div>
     </div>
