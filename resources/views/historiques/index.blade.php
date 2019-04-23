@@ -49,7 +49,7 @@ use App\User;?>
                           <td>
                             {{$capteur['code_capteur']}}
                           </td>
-                          <td> {{$user['pseudo']}}</td>
+                          <td> {{$user['email']}}</td>
                         @if(Auth::user()->usertype=="super")  <td>
                             {{$capteur['etab']}}
                           </td> @endif
