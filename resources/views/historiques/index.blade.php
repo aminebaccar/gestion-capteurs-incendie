@@ -35,7 +35,8 @@
                       </thead>
                       <tbody>
                         @foreach($historiques as $historique)
-                        <?php $capteur = Capteur::find($historique->capteur); ?>
+                        <?php $capteur = Capteur::find($historique->capteur);
+                        $user = User::find($historique->consulte);?>
                         @if(Auth::user()->etab==$capteur['etab'] || Auth::user()->usertype=="super" )
 
                         <tr>
@@ -45,9 +46,9 @@
                             {{$historique->created_at}}
                           </td>
                           <td>
-                            {{$historique->capteur}}
+                            {{$capteur['code_capteur']}}
                           </td>
-                          <td> {{$historique->consulte}}
+                          <td> {{$user['pseudo']}}</td>
                         @if(Auth::user()->usertype=="super")  <td>
                             {{$capteur['etab']}}
                           </td> @endif
