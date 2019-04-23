@@ -39,6 +39,7 @@ class InterventionController extends Controller
     public function store(Request $request)
     {
       $request->validate([
+        'commentaire'=>'required'
 
     ]);
     $user = Auth::user();
