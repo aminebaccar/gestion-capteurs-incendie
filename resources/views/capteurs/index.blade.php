@@ -60,6 +60,7 @@ $(document).ready(function() {
   } );
 } );
 </script>
+@endif
 
 <div class="uper">
   @if(session()->get('success'))
