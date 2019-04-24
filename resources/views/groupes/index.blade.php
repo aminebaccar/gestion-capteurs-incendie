@@ -27,17 +27,6 @@
 
 $(document).ready(function() {
   $('#example').DataTable( {
-      order: [[4, 'asc']],
-      rowGroup: {
-          dataSrc: 4
-      },
-      "columnDefs": [
-            {
-                "targets": [ 4 ],
-                "visible": false,
-                "searchable": false
-            }
-             ]
   } );
 } );
 </script>
