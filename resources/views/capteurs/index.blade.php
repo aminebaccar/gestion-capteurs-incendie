@@ -93,6 +93,7 @@ $(document).ready(function() {
                       <tbody>
                         @foreach($capteurs as $capteur)
                         <?php
+                        //$c = le groupe de $capteur
                         $c = Capteur::find($capteur['parent']);
                         if ($c['type']=="capteur") {
                             $etab = $c['etab'];
@@ -101,7 +102,7 @@ $(document).ready(function() {
                         }
 
                           ?>
-                        @if((Auth::user()->etab==$capteur->etab || Auth::user()->usertype=="super") && $capteur['type']=="capteur")
+                        @if((Auth::user()->etab==$c->etab || Auth::user()->usertype=="super") && $capteur['type']=="capteur")
                         <tr>
                         @if(Auth::user()->usertype == "super")   <td><span class="text-muted">{{$capteur->id}}</span></td> @endif
                           <td>{{$capteur->code_capteur}}</td>
