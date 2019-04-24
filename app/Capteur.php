@@ -10,6 +10,7 @@ class Capteur extends Model
   'code_capteur',
   'etat',
   'etab',
-  'type'
+  'type',
+  'parent'
 ];
 }
