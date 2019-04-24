@@ -40,8 +40,8 @@ $(document).ready(function() {
 <input type="hidden" id="logged" name="loggedin" value="{{Auth::user()->email}}"/>
 <div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
-    <p style="font-size:20px">Capteurs
-    <span class="float-right" ><a href="groupes/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Capteur +</a>
+    <p style="font-size:20px">Groupes
+    <span class="float-right" ><a href="groupes/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Groupe +</a>
     </span></p>
   </div>
                   <div class="table-responsive">
