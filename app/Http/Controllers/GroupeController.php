@@ -1,4 +1,4 @@
-a<?php
+<?php
 
 namespace App\Http\Controllers;
 
@@ -97,7 +97,7 @@ class GroupeController extends Controller
       $groupe->delete();
       return redirect('/groupes');
     }
-    
+
     public function __construct()
     {
     $this->middleware('auth');
