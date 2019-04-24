@@ -41,7 +41,7 @@
                   $stmt->execute();
                   $groups = $stmt->fetchAll();
                    foreach($groups as $group): ?>
-                  <option value="<?= $group['id']; ?>" name="etab">
+                  <option value="<?= $group['id']; ?>" name="parent">
                   <?= $group['code_capteur']; ?></option>
                   <?php endforeach; ?>
               </select><br/>
