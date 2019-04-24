@@ -11,6 +11,7 @@
 
 </style>
 
+
 <div class="uper">
   @if(session()->get('success'))
     <div class="alert alert-success">
@@ -44,6 +45,9 @@
                       </thead>
                       <tbody>
                         @foreach($users as $user)
+                          @php
+                          $etab = Etablissement::find($user->etab);
+                          @endphp
                         @if ($user->etab==Auth::user()->etab || Auth::user()->etab==null )
                         <tr>
                           @if (Auth::user()->usertype=="super")<td><span class="text-muted">{{$user->id}}</span></td>@endif
@@ -68,7 +72,7 @@
                           <td><span class="status-icon bg-success"></span>Actif</td>
                           <?php endif; ?>
                           @if(Auth::user()->usertype=="super")<td>
-                            {{$user->etab}}
+                            {{$etab['nom']}}
                           </td>@endif
                           <td class="text-right">
                             <a class="icon" href="{{ route('users.edit',$user->id)}}" data-balloon="Modifier" data-balloon-pos="right">
