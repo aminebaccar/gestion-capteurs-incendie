@@ -61,6 +61,7 @@ $(document).ready(function() {
                       <tbody>
                         @foreach($groupes as $groupe)
                           @if($groupe->type=="groupe")
+                            @if($groupe->etab==Auth::user()->etab || Auth::user()->usertype=="super")
                           <tr>
                             @if(Auth::user()->usertype=="super")<td><span class="text-muted">{{$groupe->id}}</span></td>@endif
                               <td>{{$groupe->code_capteur}}</td>
@@ -80,6 +81,7 @@ $(document).ready(function() {
 </form>
                           </td>
                         </tr>
+                      @endif
                       @endif
                         @endforeach
                       </tbody>
