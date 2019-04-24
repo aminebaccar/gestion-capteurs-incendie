@@ -31,6 +31,7 @@ Route::get('alertes/consulte/{id}', 'AlerteController@consulte')->name('alertes.
 
 Route::resource('users', 'UserController');
 Route::resource('capteurs', 'CapteurController');
+Route::resource('groupes', 'GroupeController');
 Route::resource('type_intervs', 'TypeIntervController');
 Route::resource('interventions', 'InterventionController');
 Route::resource('historiques', 'HistoriqueController');
