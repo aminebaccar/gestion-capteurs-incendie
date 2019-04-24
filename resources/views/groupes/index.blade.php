@@ -83,40 +83,19 @@ $(document).ready(function() {
                       <thead>
                         <tr>
                         @if(Auth::user()->usertype == "super")  <th class="w-1">ID.</th> @endif
-                          <th>Code Capteur</th>
-                          <th>État</th>
-                        @if (Auth::user()->usertype == "super") <th> Établissement</th> @endif
                           <th>Groupe</th>
+                          <th>Quantité</th>
+                        @if (Auth::user()->usertype == "super") <th> Établissement</th> @endif
                           <th></th>
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach($capteurs as $capteur)
-                        <?php
-                        $c = Capteur::find($capteur['parent']);
-                        if ($c['type']=="capteur") {
-                            $etab = $c['etab'];
-                        } else {
-                            $etab = $capteur['etab'];
-                        }
-
-                          ?>
-                        @if((Auth::user()->etab==$capteur->etab || Auth::user()->usertype=="super") && $capteur['type']=="capteur")
-                        <tr>
-                        @if(Auth::user()->usertype == "super")   <td><span class="text-muted">{{$capteur->id}}</span></td> @endif
-                          <td>{{$capteur->code_capteur}}</td>
-                          <td>{{$capteur->etat}}</td>
-                        @if (Auth::user()->usertype == "super")  <td> {{$etab}}</td>@endif
-
-                    @if ($c['code_capteur']!="")
-
-                      @if (Auth::user()->usertype == "super") <td>Groupe {{$c['code_capteur']}} ({{$etab}})</td>
-                      @else <td>Groupe {{$c['code_capteur']}}</td> @endif
-
-                    @else
-                    <td></td>
-                    @endif
-
+                        @foreach($groupes as $groupe)
+                          <tr>
+                            @if(Auth::user()->usertype=="super")<td><span class="text-muted">{{$groupe->id}}</span></td>@endif
+                              <td>{{$groupe->code_capteur}}</td>
+                              <td>10</td>
+                            @if(Auth::user()->usertype=="super")<td>{{$groupe->etab}}</td>@endif  
                           <td>
                             <form action="{{ route('capteurs.destroy', $capteur->id) }}" method="POST">
 {{ method_field('DELETE') }}
