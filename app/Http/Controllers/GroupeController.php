@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Capteur;
 
-class CapteurController extends Controller
+class GroupeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -97,6 +97,7 @@ class CapteurController extends Controller
       $groupe->delete();
       return redirect('/groupes');
     }
+    
     public function __construct()
     {
     $this->middleware('auth');
