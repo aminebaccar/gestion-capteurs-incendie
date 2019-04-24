@@ -102,7 +102,7 @@ $(document).ready(function() {
                         }
 
                           ?>
-                        @if((Auth::user()->etab==$etab || Auth::user()->usertype=="super") && $capteur['type']=="capteur")
+                        @if((Auth::user()->etab==$c->etab || Auth::user()->usertype=="super") && $capteur['type']=="capteur")
                         <tr>
                         @if(Auth::user()->usertype == "super")   <td><span class="text-muted">{{$capteur->id}}</span></td> @endif
                           <td>{{$capteur->code_capteur}}</td>
