@@ -14,7 +14,8 @@ class GroupeController extends Controller
      */
     public function index()
     {
-      $groupes = Capteur::all();
+      $groupes = Capteur::all()->where('type', 'like', 'groupe')
+                ->get();
 
       return view('groupes.index', compact('groupes'));
     }
