@@ -39,12 +39,14 @@ class CapteurController extends Controller
     {
       $request->validate([
       'code_capteur'=>'required',
-      'etab' => 'required'
+      'etab' => 'required',
+      'parent' => 'required'
     ]);
 
     $capteur = new Capteur([
       'code_capteur' => $request->get('code_capteur'),
-      'etab' => $request->get('etab')
+      'etab' => $request->get('etab'),
+      'parent' => $request->get('parent')
     ]);
 
     $capteur->save();
