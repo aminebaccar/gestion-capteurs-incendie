@@ -64,7 +64,7 @@ $(document).ready(function() {
                           <tr>
                             @if(Auth::user()->usertype=="super")<td><span class="text-muted">{{$groupe->id}}</span></td>@endif
                               <td>{{$groupe->code_capteur}}</td>
-                              <td>10</td>
+                              <td>{{DB::table('capteurs')->where('parent', $groupe->code_capteur)->count('code_capteur');}}</td>
                             @if(Auth::user()->usertype=="super")<td>{{$groupe->etab}}</td>@endif
                           <td>
                             <form action="{{ route('groupes.destroy', $groupe->id) }}" method="POST">
