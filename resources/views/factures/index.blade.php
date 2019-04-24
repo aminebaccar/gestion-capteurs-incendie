@@ -35,7 +35,7 @@
                       </thead>
                       <tbody>
                         @foreach($factures as $facture)
-                          @php($etab= Etablissement::find($facture['etab']);)@endphp
+                          @php $etab= Etablissement::find($facture['etab']); @endphp
                         @if ($facture['etab']==Auth::user()->etab || Auth::user()->usertype=="super")
                         <tr>
                           <td><span class="text-muted">{{$facture->id}}</span></td>
