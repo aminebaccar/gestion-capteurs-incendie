@@ -22,7 +22,6 @@
 }
 
 </style>
-  @if (Auth::user()->usertype=="super")
 <script type="text/javascript">
 
 $(document).ready(function() {
@@ -30,26 +29,7 @@ $(document).ready(function() {
   } );
 } );
 </script>
-@else
-<script type="text/javascript">
 
-$(document).ready(function() {
-  $('#example').DataTable( {
-      order: [[2, 'asc']],
-      rowGroup: {
-          dataSrc: 2
-      },
-      "columnDefs": [
-            {
-                "targets": [ 2 ],
-                "visible": false,
-                "searchable": false
-            }
-             ]
-  } );
-} );
-</script>
-@endif
 
 <div class="uper">
   @if(session()->get('success'))
