@@ -1,5 +1,6 @@
 @extends('layouts.app')
 <?php use App\Capteur;
+use App\Etablissement;
 $current_user = Auth::user();
 ?>
 @section('content')
@@ -101,11 +102,12 @@ $(document).ready(function() {
                         <?php
                         //$c = le groupe de $capteur
                         $c = Capteur::find($capteur['parent']);
-                        if ($c['type']=="capteur") {
+                        $etab = Etablissement::find($capteur['etab']);
+                        /*if ($c['type']=="capteur") {
                             $etab = $c['etab'];
                         } else {
                             $etab = $capteur['etab'];
-                        }
+                        }*/
 
                           ?>
                         @if(($current_user['etab']==$c['etab'] || Auth::user()->usertype=="super") && $capteur['type']=="capteur")
@@ -113,7 +115,7 @@ $(document).ready(function() {
                         @if(Auth::user()->usertype == "super")   <td><span class="text-muted">{{$capteur->id}}</span></td> @endif
                           <td>{{$capteur->code_capteur}}</td>
                           <td>{{$capteur->etat}}</td>
-                        @if (Auth::user()->usertype == "super")  <td> {{$etab}}</td>@endif
+                        @if (Auth::user()->usertype == "super")  <td> {{$etab['nom']}}</td>@endif
 
                     @if ($c['code_capteur']!="")
 
