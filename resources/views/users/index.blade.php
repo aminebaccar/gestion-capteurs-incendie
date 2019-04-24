@@ -1,3 +1,4 @@
+@php use App\Etablissement;
 @extends('layouts.app')
 
 @section('content')
