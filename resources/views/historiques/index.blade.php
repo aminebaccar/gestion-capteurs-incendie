@@ -1,6 +1,7 @@
 @extends('layouts.app')
 <?php use App\Capteur;
-use App\User;?>
+use App\User;
+use App\Etablissement;?>
 @section('content')
 <style>
   .uper {
@@ -37,7 +38,8 @@ use App\User;?>
                       <tbody>
                         @foreach($historiques as $historique)
                         <?php $capteur = Capteur::find($historique->capteur);
-                        $user = User::find($historique->consulte);?>
+                        $user = User::find($historique->consulte);
+                        $etab = Etablissement::find($historique);?>
                         @if(Auth::user()->etab==$capteur['etab'] || Auth::user()->usertype=="super" )
 
                         <tr>
@@ -51,7 +53,7 @@ use App\User;?>
                           </td>
                           <td> {{$user['email']}}</td>
                         @if(Auth::user()->usertype=="super")  <td>
-                            {{$capteur['etab']}}
+                            {{$etab['nom']}}
                           </td> @endif
                         </tr>
                         @endif
