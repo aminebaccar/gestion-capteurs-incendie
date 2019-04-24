@@ -39,7 +39,7 @@ use App\Etablissement;?>
                         @foreach($historiques as $historique)
                         <?php $capteur = Capteur::find($historique->capteur);
                         $user = User::find($historique->consulte);
-                        $etab = Etablissement::find($historique);?>
+                        $etab = Etablissement::find($historique->etab);?>
                         @if(Auth::user()->etab==$capteur['etab'] || Auth::user()->usertype=="super" )
 
                         <tr>
