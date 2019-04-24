@@ -25,7 +25,27 @@
           <div class="form-group">
               @csrf
               <label for="name">Code Capteur:</label>
-              <input type="text" class="form-control" name="code_capteur"/>
+              <input type="text" class="form-control" name="code_capteur"/><br/>
+
+              <label for="name">Groupe:</label>
+              <select class="form-control" name="parent">
+                  <?php
+                  $pdo = new PDO('mysql:host=api.tangorythm.com;dbname=sdi;charset=utf8', 'sdiuser', 'Sdi2019user');
+                  if(Auth::user()->usertype=="super")
+                  $sql = "SELECT * FROM capteurs where type like 'groupe'";
+                  else {
+                    $sql = "SELECT * FROM capteurs where type like 'groupe' and etab like ".Auth::user()->etab;
+
+                  }
+                  $stmt = $pdo->prepare($sql);
+                  $stmt->execute();
+                  $groups = $stmt->fetchAll();
+                   foreach($groups as $group): ?>
+                  <option value="<?= $group['id']; ?>" name="etab">
+                  <?= $group['code_capteur']; ?></option>
+                  <?php endforeach; ?>
+              </select><br/>
+
               @if (Auth::user()->usertype=="super")
               <label for="etab">Établissement:</label>
               <select class="form-control" name="etab">
