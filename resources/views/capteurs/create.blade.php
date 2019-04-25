@@ -40,7 +40,7 @@
                   $stmt->execute();
                   $groups = $stmt->fetchAll();
                    foreach($groups as $group): ?>
-                  <option value="<?= $group['id']; ?>" data-etab="{{$group['etab']}}" name="parent">
+                  <option id="parent" value="<?= $group['id']; ?>" data-etab="{{$group['etab']}}" name="parent">
                   <?= $group['code_capteur']; ?></option>
                   <?php endforeach; ?>
               </select><br/>
