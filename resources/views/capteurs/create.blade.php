@@ -55,7 +55,7 @@
                   $stmt->execute();
                   $etabs = $stmt->fetchAll();
                    foreach($etabs as $etab): ?>
-                  <option value="<?= $etab['id']; ?>" name="etab">
+                  <option id="id" value="<?= $etab['id']; ?>" name="etab">
                   <?= $etab['nom']; ?></option>
                   <?php endforeach; ?>
               </select>
