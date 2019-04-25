@@ -44,7 +44,16 @@
               });
               } );
     </script>
+    <script>
+    function validateForm() {
+    var group = getElementById('parent').data-etab;
+    var etab = getElementById('etab').value;
+    if(group!=etab){
+      alert("Le groupe des capteurs et l'établissement doit être les mêmes");
+    }
 
+    }
+    </script>
 
 
 </head>
