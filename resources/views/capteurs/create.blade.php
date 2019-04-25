@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <style>
   .uper {
@@ -20,7 +19,7 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="{{ route('capteurs.store') }}">
+      <form method="post" action="{{ route('capteurs.store') }}" onsubmit="return validateForm()">
         @handheld <div> @elsehandheld <div class="col-6"> @endhandheld
           <div class="form-group">
               @csrf
@@ -56,7 +55,7 @@
                   $stmt->execute();
                   $etabs = $stmt->fetchAll();
                    foreach($etabs as $etab): ?>
-                  <option value="<?= $etab['nom']; ?>" name="etab">
+                  <option value="<?= $etab['id']; ?>" name="etab">
                   <?= $etab['nom']; ?></option>
                   <?php endforeach; ?>
               </select>
@@ -67,6 +66,7 @@
           <button type="submit" class="btn btn-primary">Confirmer</button>
         </div>
       </form>
+
   </div>
 </div>
 @endsection
