@@ -55,7 +55,7 @@ if(group!=etab){
                   <option id="parent" value="<?= $group['id']; ?>" data-etab="{{$group['etab']}}" name="parent">
                   <?= $group['code_capteur']; ?></option>
                   <input name="group-etab" type="hidden" value="{{$group['etab']}}"/>
-                  <?php endforeach; ?>
+                  <?php endforeach; ?> 
               </select><br/>
 
               @if (Auth::user()->usertype=="super")
