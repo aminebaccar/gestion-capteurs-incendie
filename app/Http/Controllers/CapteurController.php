@@ -37,6 +37,10 @@ class CapteurController extends Controller
      */
     public function store(Request $request)
     {
+      $q = $request->get('parent');
+      $group = substr($q, 0, strrpos($q,'-'));
+      $etab = substr($q, strrpos($q,'-')+1, strlen($q));
+
       $request->validate([
       'code_capteur'=>'required',
       'etab' => 'required',
@@ -46,7 +50,7 @@ class CapteurController extends Controller
     $capteur = new Capteur([
       'code_capteur' => $request->get('code_capteur'),
       'etab' => $request->get('etab'),
-      'parent' => $request->get('parent')
+      'parent' => $group
     ]);
 
     $capteur->save();
