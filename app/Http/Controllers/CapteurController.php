@@ -38,12 +38,14 @@ class CapteurController extends Controller
     public function store(Request $request)
     {
       $q = $request->get('parent');
+
       $group = substr($q, 0, strrpos($q,'-'));
       $etab = substr($q, strrpos($q,'-')+1, strlen($q));
 
+      if($etab==$request->get('etab')){
       $request->validate([
       'code_capteur'=>'required',
-      'etab' => 'required', 
+      'etab' => 'required',
       'parent' => 'required'
     ]);
 
@@ -55,7 +57,10 @@ class CapteurController extends Controller
 
     $capteur->save();
     return redirect('/capteurs');
-    }
+  }}
+  else{
+    return redirect('/capteurs/create')->with('error',"Le groupe doit être dans l'établissement choisit");
+  }
 
     /**
      * Display the specified resource.
