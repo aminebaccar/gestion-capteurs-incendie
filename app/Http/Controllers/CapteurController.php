@@ -57,11 +57,11 @@ class CapteurController extends Controller
 
     $capteur->save();
     return redirect('/capteurs');
-  }}
+  }
   else{
     return redirect('/capteurs/create')->with('error',"Le groupe doit être dans l'établissement choisit");
   }
-
+}
     /**
      * Display the specified resource.
      *
