@@ -5,7 +5,7 @@
     margin-top: 20px;
   }
 </style>
-<script>
+<!--<script>
 function validateForm() {
 var group = getElementById('parent').data-etab;
 document.write("<h1>"+group+"</h1>");
@@ -16,7 +16,7 @@ if(group!=etab){
 }
 
 }
-</script>
+</script>-->
 <div class="card uper">
   <div class="card-header">
     Ajouter Capteur
@@ -54,6 +54,7 @@ if(group!=etab){
                    foreach($groups as $group): ?>
                   <option id="parent" value="<?= $group['id']; ?>" data-etab="{{$group['etab']}}" name="parent">
                   <?= $group['code_capteur']; ?></option>
+                  <input name="group-etab" type="hidden" value="{{$group['etab']}}"/>
                   <?php endforeach; ?>
               </select><br/>
 
