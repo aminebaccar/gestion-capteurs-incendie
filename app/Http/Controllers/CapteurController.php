@@ -59,7 +59,7 @@ class CapteurController extends Controller
     return redirect('/capteurs');
   }
   else{
-    return redirect('/capteurs/create')->with('errors',"Le groupe doit être dans l'établissement choisit");
+    return redirect('/capteurs/create')->with('error',"Le groupe doit être dans l'établissement choisit");
   }
 }
     /**

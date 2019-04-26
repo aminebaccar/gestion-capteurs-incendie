@@ -31,6 +31,11 @@ if(group!=etab){
         </ul>
       </div><br />
     @endif
+    @if(session()->has('error'))
+    <div class="alert alert-danger">
+        {{ session()->get('message') }}
+    </div>
+@endif
       <form method="post" action="{{ route('capteurs.store') }}" onsubmit="return validateForm()">
         @handheld <div> @elsehandheld <div class="col-6"> @endhandheld
           <div class="form-group">
