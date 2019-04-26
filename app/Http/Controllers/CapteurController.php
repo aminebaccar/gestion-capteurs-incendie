@@ -50,7 +50,7 @@ class CapteurController extends Controller
     $capteur = new Capteur([
       'code_capteur' => $request->get('code_capteur'),
       'etab' => $request->get('etab'),
-      'parent' => $group
+      'parent' => $group 
     ]);
 
     $capteur->save();
