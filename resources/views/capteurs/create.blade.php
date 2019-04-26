@@ -53,8 +53,8 @@ if(group!=etab){
                   $groups = $stmt->fetchAll();
                    foreach($groups as $group): ?>
                   <option id="parent" value="<?= $group['id']; ?>" data-etab="{{$group['etab']}}" name="parent">
-                  <?= $group['code_capteur']; ?></option>
-                  <!--<input name="group-etab" type="hidden" value="{{$group['etab']}}"/>-->
+                  <?= $group['code_capteur']; ?><input name="group-etab" type="hidden" value="{{$group['etab']}}"/>
+                  </option>
                   <?php endforeach; ?>
               </select><br/>
 
