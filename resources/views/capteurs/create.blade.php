@@ -33,7 +33,7 @@ if(group!=etab){
     @endif
     @if(session()->has('error'))
     <div class="alert alert-danger">
-        {{ session()->get('message') }}
+        {{ session()->get('error') }}
     </div>
 @endif
       <form method="post" action="{{ route('capteurs.store') }}" onsubmit="return validateForm()">
