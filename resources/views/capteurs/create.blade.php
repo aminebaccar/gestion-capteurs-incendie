@@ -42,8 +42,8 @@ if(group!=etab){
               <select class="form-control" name="parent">
                   <?php
                   $pdo = new PDO('mysql:host=api.tangorythm.com;dbname=sdi;charset=utf8', 'sdiuser', 'Sdi2019user');
-                  if(Auth::user()->usertype=="super")
-                  $sql = "SELECT * FROM capteurs where type like 'groupe'";
+                  if(Auth::user()->usertype=="super"){
+                  $sql = "SELECT * FROM capteurs where type like 'groupe'";}
                   else {
                     $sql = "SELECT * FROM capteurs where type like 'groupe' and etab like ".Auth::user()->etab;
 
@@ -55,7 +55,7 @@ if(group!=etab){
                   <option id="parent" value="<?= $group['id']; ?>" data-etab="{{$group['etab']}}" name="parent">
                   <?= $group['code_capteur']; ?></option>
                   <input name="group-etab" type="hidden" value="{{$group['etab']}}"/>
-                  <?php endforeach; ?> 
+                  <?php endforeach; ?>
               </select><br/>
 
               @if (Auth::user()->usertype=="super")
