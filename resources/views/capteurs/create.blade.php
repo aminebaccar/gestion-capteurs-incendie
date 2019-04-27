@@ -5,18 +5,7 @@
     margin-top: 20px;
   }
 </style>
-<!--<script>
-function validateForm() {
-var group = getElementById('parent').data-etab;
-document.write("<h1>"+group+"</h1>");
-var etab = getElementById('etab').value;
-document.write("<h2>"+etab+"</h2>");
-if(group!=etab){
-  alert("Le groupe de capteurs et l'établissement doit être les mêmes!");
-}
 
-}
-</script>-->
 <div class="card uper">
   <div class="card-header">
     Ajouter Capteur
