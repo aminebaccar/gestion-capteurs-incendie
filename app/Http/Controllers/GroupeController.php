@@ -44,7 +44,8 @@ class GroupeController extends Controller
 
     $groupe = new Capteur([
       'code_capteur' => $request->get('code_capteur'),
-      'etab' => $request->get('etab')
+      'etab' => $request->get('etab'),
+      'type' => 'groupe'
     ]);
 
     $groupe->save();
