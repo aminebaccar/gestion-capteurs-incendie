@@ -50,10 +50,8 @@ class InterventionController extends Controller
     $capteur = Capteur::find($request->get('capteur'));
     $groupe = Capteur::find($capteur['parent']);
 
-    dd($user. ' ** '.$user['etab']);
-    dd($type. ' ** '.$type['etab']);
-    dd($capteur. ' ** '.$capteur['parent']);
-    dd($groupe. ' ** '.$groupe['etab']);
+    dump($user. ' ** '.$type. ' ** '.$capteur.' ** '.$groupe);
+
 
     $egalite = $user['etab']==$type['etab'] && $type['etab']==$groupe['etab'];
 
