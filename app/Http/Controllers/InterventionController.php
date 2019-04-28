@@ -40,13 +40,13 @@ class InterventionController extends Controller
     public function store(Request $request)
     {
       $request->validate([
-        
+
 
     ]);
     $user = $request->get('email');
     $type = $request->get('type');
     $capteur = $request->get('capteur');
-    $groupe = Capteur::find($capteur['parent']);
+    $groupe = Capteur::find($capteur->parent);
 
     $egalite = $user['etab']==$type['etab'] && $type['etab']==$groupe['etab'];
 
