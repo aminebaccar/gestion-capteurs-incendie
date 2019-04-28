@@ -57,7 +57,7 @@ class InterventionController extends Controller
 
     dd($user. ' ** '.$type. ' ** '.$capteur.' ** '.$groupe.' ** '.$egalite);
 
-    if(()$user['etab']==$type['etab']) && ($type['etab']==$groupe['etab'])){
+    if(($user['etab']==$type['etab']) && ($type['etab']==$groupe['etab'])){
     $intervention = new Intervention([
       'type' => $request->get('type'),
       'commentaire' => $request->get('commentaire'),
