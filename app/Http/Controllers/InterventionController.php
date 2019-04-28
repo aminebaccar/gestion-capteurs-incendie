@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Intervention;
-use App\TypeIntervention;
+use App\TypeInterv;
 use App\User;
 use App\Capteur;
 use Auth;
@@ -46,7 +46,7 @@ class InterventionController extends Controller
 
     ]);
     $user = User::find($request->get('email'));
-    $type = TypeIntervention::find($request->get('type'));
+    $type = TypeInterv::find($request->get('type'));
     $capteur = Capteur::find($request->get('capteur'));
     $groupe = Capteur::find($capteur['parent']);
 
