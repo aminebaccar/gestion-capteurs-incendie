@@ -55,6 +55,7 @@ class InterventionController extends Controller
 
     $egalite = $user['etab']==$type['etab'] && $type['etab']==$groupe['etab'];
 
+    dump($type);
     dump($user['etab']. ' ** '.$type['etab']. ' ** '.$capteur['parent'].' ** '.$groupe['etab'].' ** '.$egalite);
 
     if(($user['etab']==$type['etab']) && ($type['etab']==$groupe['etab'])){
