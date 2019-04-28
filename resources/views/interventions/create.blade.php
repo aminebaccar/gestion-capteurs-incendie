@@ -105,10 +105,11 @@
                   $stmt->execute();
                   $users = $stmt->fetchAll();
                   foreach ($users as $user):
+                    $etabli = Etablissement::find($user['etab']);
                      if ($user['id']!=$id) {
                          ?>
                   <option value="<?= $user['id']; ?>" name="email">
-                  <?= $user['email'] ." "."(".$user['etab'].")"; ?> </option>
+                  <?= $user['email'] ." "."(".$etabli['nom'].")"; ?> </option>
 
                   <?php
                      } endforeach; ?>
