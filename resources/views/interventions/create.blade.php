@@ -48,7 +48,7 @@
                   $types = $stmt->fetchAll();
                    foreach ($types as $type):
                      $eqqq = Etablissement::find($type['etab']);?>
-                  <option value="<?= $type['type']; ?>" name="type">
+                  <option value="<?= $type['id']; ?>" name="type">
                   <?= $type['type']; ?> ({{$eqqq['nom']}})</option>
                   <?php endforeach; ?>
               </select><br/>
