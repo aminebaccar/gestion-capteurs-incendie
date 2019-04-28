@@ -38,13 +38,14 @@ use App\Etablissement;?>
                           <th>Commentaire</th>
                           <th>Date</th>
                         @if(Auth::user()->usertype!="normal")  <th>Utilisateur</th>@endif
+                          <th>Capteur</th>
                           @if(Auth::user()->usertype=="super")<th>Établissement</th>@endif
                         </tr>
                       </thead>
                       <tbody>
                         @foreach($interventions as $intervention)
                         <?php $user = User::find($intervention->user);
-                        $etb = Etablissement::find($user['etan']);?>
+                        $etb = Etablissement::find($intervention['etab']);?>
                         @if(Auth::user()->etab == $user['etab'] || Auth::user()->usertype=="super" )
                         @if((Auth::user()==$user && Auth::user()->usertype=="normal")|| Auth::user()->usertype!="normal")
                         <tr>
@@ -59,10 +60,17 @@ use App\Etablissement;?>
                           </td>
 
                           @endif
-
+                          <td>
+                          @php
+                            $cp = Capteur::find($intervention['capteur']);
+                            $gr = Capteur::find($cp['parent']);
+                            $eb = Etablissement::find($gr['etab']);
+                          @endphp
+                          {{$cp['code_capteur']}} (Groupe: {{$gr['code_capteur']}})
+                          </td>
                           @if(Auth::user()->usertype=="super")
                           <td>
-                            {{$etb['nom']}}
+                            {{$eb['nom']}}
                           </td>
                           @endif
                         </tr>
