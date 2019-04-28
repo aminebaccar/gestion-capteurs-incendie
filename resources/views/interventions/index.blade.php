@@ -1,5 +1,6 @@
 @extends('layouts.app')
-<?php use App\User;?>
+<?php use App\User;
+use App\Etablissement;?>
 @section('content')
 <style>
   .uper {
@@ -46,7 +47,8 @@
                       </thead>
                       <tbody>
                         @foreach($interventions as $intervention)
-                        <?php $user = User::find($intervention->user); ?>
+                        <?php $user = User::find($intervention->user);
+                        $etb = Etablissement::find($user['etan']);?>
                         @if(Auth::user()->etab == $user['etab'] || Auth::user()->usertype=="super" )
                         @if((Auth::user()==$user && Auth::user()->usertype=="normal")|| Auth::user()->usertype!="normal")
                         <tr>
@@ -64,7 +66,7 @@
 
                           @if(Auth::user()->usertype=="super")
                           <td>
-                            {{$user['etab']}}
+                            {{$etb['nom']}}
                           </td>
                           @endif
                         </tr>
