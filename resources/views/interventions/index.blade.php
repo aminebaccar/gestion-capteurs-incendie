@@ -17,6 +17,11 @@
       {{ session()->get('success') }}
     </div><br />
   @endif
+  @if(session()->get('error'))
+    <div class="alert alert-danger">
+      {{ session()->get('error') }}
+    </div><br />
+  @endif
 
 <div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
@@ -54,7 +59,7 @@
                           @if(Auth::user()->usertype=="admin"||Auth::user()->usertype=="super")<td>
                             {{$user['email']}}
                           </td>
-                          
+
                           @endif
 
                           @if(Auth::user()->usertype=="super")
