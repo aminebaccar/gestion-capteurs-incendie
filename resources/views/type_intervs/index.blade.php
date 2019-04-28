@@ -38,11 +38,12 @@
                       </thead>
                       <tbody>
                         @foreach($type_intervs as $type_interv)
+                          @php $et = Etablissement::find($type_interv['etab']); @endphp
                         @if ($type_interv->etab==Auth::user()->etab || Auth::user()->usertype=="super" )
                         <tr>
                           <td><span class="text-muted">{{$type_interv->id}}</span></td>
                           <td>{{$type_interv->type}}</td>
-                          @if (Auth::user()->usertype=="super")<td>{{$type_interv->etab}}</td>@endif
+                          @if (Auth::user()->usertype=="super")<td>{{$et['nom']}}</td>@endif
                           <td>
                             <form action="{{ route('type_intervs.destroy', $type_interv->id) }}" method="POST">
 {{ method_field('DELETE') }}
