@@ -25,6 +25,11 @@
         </ul>
       </div><br />
     @endif
+    @if(session()->get('error'))
+      <div class="alert alert-danger">
+        {{ session()->get('error') }}
+      </div><br />
+    @endif
       <form method="post" action="{{ route('interventions.store') }}">
         @handheld <div> @elsehandheld <div class="col-6"> @endhandheld
           <div class="form-group">
