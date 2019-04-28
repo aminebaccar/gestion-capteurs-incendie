@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Intervention;
+use App\Capteur;
 use Auth;
 
 class InterventionController extends Controller
