@@ -51,7 +51,10 @@ use App\Capteur;?>
                         @if((Auth::user()==$user && Auth::user()->usertype=="normal")|| Auth::user()->usertype!="normal")
                         <tr>
                         @if(Auth::user()->usertype=="super")  <td><span class="text-muted">{{$intervention->id}}</span></td>@endif
-                          <td>{{$intervention->type}}</td>
+                          <td>
+                            @php
+                             $t = Intervention::find($intervention->type);
+                            @endphp{{$t['type']}}</td>
                           <td>{{$intervention->commentaire}}</td>
                           <td>
                             {{$intervention->created_at}}
