@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@php
+  use App\Etablissement;
+@endphp
 @section('content')
 <style>
   .uper {
