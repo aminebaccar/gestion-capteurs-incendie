@@ -1,7 +1,8 @@
 @extends('layouts.app')
 <?php use App\User;
 use App\Etablissement;
-use App\Capteur;?>
+use App\Capteur;
+use App\Intervention;?>
 @section('content')
 <style>
   .uper {
@@ -54,7 +55,9 @@ use App\Capteur;?>
                           <td>
                             @php
                              $t = Intervention::find($intervention->type);
-                            @endphp{{$t['type']}}</td>
+                            @endphp
+                            {{$t['type']}}
+                          </td>
                           <td>{{$intervention->commentaire}}</td>
                           <td>
                             {{$intervention->created_at}}
