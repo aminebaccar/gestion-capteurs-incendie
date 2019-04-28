@@ -42,7 +42,14 @@ class InterventionController extends Controller
         'commentaire'=>'required'
 
     ]);
-    $user = Auth::user();
+    $user = $request->get('email');
+    $type = $request->get('type');
+    $capteur = $request->get('capteur');
+    $groupe = Capteur::find($capteur['parent']);
+
+    $egalite = $user['etab']==$type['etab'] && $type['etab']==$groupe['etab'];
+
+    if($egalite){
     $intervention = new Intervention([
       'type' => $request->get('type'),
       'commentaire' => $request->get('commentaire'),
@@ -52,6 +59,10 @@ class InterventionController extends Controller
 
     $intervention->save();
     return redirect('/interventions');
+    }
+    else {
+      return redirect('/interventions/create')->with('error',"Le capteur, l'utilisateur et le type d'intervention doivent tous avoir la même établisement");
+    }
     }
 
     /**
