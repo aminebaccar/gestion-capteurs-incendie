@@ -1,6 +1,11 @@
 @extends('layouts.app')
-
 @section('content')
+
+@php
+  use App\Etablissement;
+  use App\Capteur;
+@endphp
+
 <style>
   .uper {
     margin-top: 20px;
@@ -54,9 +59,11 @@
                   $stmt->execute();
                   $cpts = $stmt->fetchAll();
                   foreach ($cpts as $cpt):
+                    $grp = Capteur::find($cpt['parent']);
+                    $etb = Etablissement::find($grp['etab']);
                      ?>
                  <option value="<?= $cpt['id']; ?>" name="capteur">
-                 <?= $cpt['code_capteur']; ?></option>
+                 <?= $cpt['code_capteur']; ?> (Groupe: {{$grp['code_capteur']}} Etablissement: {{$etb['nom']}})</option>
                  <?php endforeach; ?>
 
                 ?>
