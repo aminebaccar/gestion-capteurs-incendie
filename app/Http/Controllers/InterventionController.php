@@ -52,7 +52,7 @@ class InterventionController extends Controller
 
     $egalite = $user['etab']==$type['etab'] && $type['etab']==$groupe['etab'];
 
-    if($egalite){
+    if($user['etab']==$type['etab'] && $type['etab']==$groupe['etab']){
     $intervention = new Intervention([
       'type' => $request->get('type'),
       'commentaire' => $request->get('commentaire'),
