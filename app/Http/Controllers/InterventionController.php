@@ -43,9 +43,9 @@ class InterventionController extends Controller
 
 
     ]);
-    $user = $request->get('email');
-    $type = $request->get('type');
-    $capteur = $request->get('capteur');
+    $user = User::find($request->get('email'));
+    $type = TypeIntervention::find($request->get('type'));
+    $capteur = Capteur::find($request->get('capteur'));
     $groupe = Capteur::find($capteur['parent']);
 
     $egalite = $user['etab']==$type['etab'] && $type['etab']==$groupe['etab'];
