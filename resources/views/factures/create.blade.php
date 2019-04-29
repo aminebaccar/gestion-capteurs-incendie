@@ -31,7 +31,6 @@
               <label for="quantite">Quantité:</label>
               <input type="text" class="form-control" name="quantite"/>
             </div>
-          </div>
           <div class="form-group">
               <label for="Etablissement">Etablissement:</label>
               <select name="etab">
