@@ -5,6 +5,10 @@
   .uper {
     margin-top: 20px;
   }
+  .card-header {
+   display: block;
+
+}
 </style>
 <div class="uper">
   @if(session()->get('success'))
