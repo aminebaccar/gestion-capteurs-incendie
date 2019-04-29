@@ -129,7 +129,7 @@ $(document).ready(function() {
                             <form action="{{ route('capteurs.destroy', $capteur->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-<button type='submit' class="btn btn-danger" style="	background: none;
+<button type='submit' class="btn btn-danger" style="	background: none; onclick="return confirm('Are you sure?')"
 	color: #9aa0ac;
 	border: none;
 	padding: 0;
