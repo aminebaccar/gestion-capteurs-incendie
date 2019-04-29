@@ -50,7 +50,7 @@
                             <form action="{{ route('type_intervs.destroy', $type_interv->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-        <button type='submit' class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce type d'intervention?')" style="	background: none;
+        <button type='submit' class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce type d''intervention?')" style="	background: none;
   	           color: #9aa0ac;
               	border: none;
 	               padding: 0;
