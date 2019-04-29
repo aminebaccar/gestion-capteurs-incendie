@@ -75,7 +75,6 @@ $(document).ready(function() {
       {{ session()->get('success') }}
     </div><br />
   @endif
-<input type="hidden" id="logged" name="loggedin" value="{{Auth::user()->email}}"/>
 <div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
     <p style="font-size:20px">Capteurs
