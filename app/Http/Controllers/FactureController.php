@@ -26,7 +26,7 @@ class FactureController extends Controller
      */
     public function create()
     {
-        //
+          return view('factures.create');
     }
 
     /**
@@ -37,7 +37,20 @@ class FactureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $qt = $request->get('quantite');
+      $request->validate([
+      'quantite'=>'required|integer',
+      'etab' => 'required',
+    ]);
+
+    $facture = new Capteur([
+      'quantite' => $qt,
+      'etab' => $request->get('etab'),
+      'montant' => $qt*0.75
+    ]);
+
+    $facture->save();
+    return redirect('/factures')->with('success',"Facture ajouté avec succès");
     }
 
     /**
