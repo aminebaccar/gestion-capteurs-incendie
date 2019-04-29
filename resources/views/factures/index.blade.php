@@ -41,7 +41,7 @@
                           <td><span class="text-muted">{{$facture->id}}</span></td>
                           <td>{{$facture->quantite}}</td>
                           <td>
-                            {{$facture->montant}}
+                            {{$facture->montant}} DT
                           </td>
                           @if(Auth::user()->usertype=="super")
                           <td>
