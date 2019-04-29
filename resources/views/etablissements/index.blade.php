@@ -63,7 +63,7 @@
                             <form action="{{ route('etablissements.destroy', $etablissement->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-        <button type='submit' style="	background: none;
+        <button type='submit' onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette établissement?')" style="	background: none;
   	           color: #9aa0ac;
               	border: none;
 	               padding: 0;
