@@ -33,7 +33,7 @@
             </div>
           <div class="form-group">
               <label for="Etablissement">Etablissement:</label>
-              <select name="etab">
+              <select class="form-control" name="etab">
                 @php
                   $etbs = Etablissement::all();
                 @endphp
