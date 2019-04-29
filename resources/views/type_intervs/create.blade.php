@@ -7,7 +7,7 @@
 @section('content')
 <style>
   .uper {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 </style>
 <div class="card uper">

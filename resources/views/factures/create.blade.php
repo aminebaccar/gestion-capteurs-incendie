@@ -42,8 +42,8 @@
                 @endforeach
               </select>
           </div>
-        </div>
           <button type="submit" class="btn btn-primary">Confirmer</button>
+        </div>
       </form>
   </div>
 </div>
