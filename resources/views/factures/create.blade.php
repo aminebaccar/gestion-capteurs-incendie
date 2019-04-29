@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@php
+  use App\Etablissement;
+@endphp
+
 @section('content')
 <style>
   .uper {
@@ -8,7 +12,7 @@
 </style>
 <div class="card uper">
   <div class="card-header">
-    Ajouter Établissement
+    Ajouter Facture
   </div>
   <div class="card-body">
     @if ($errors->any())
@@ -20,23 +24,24 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="{{ route('etablissements.store') }}">
+      <form method="post" action="{{ route('factures.store') }}">
       @handheld <div> @elsehandheld   <div class="col-4"> @endhandheld
           <div class="form-group">
               @csrf
-              <label for="email">Nom Établissement:</label>
-
-              <input type="text" class="form-control" name="nom"/>
+              <label for="quantite">Quantité:</label>
+              <input type="text" class="form-control" name="quantite"/>
             </div>
           </div>
-            @handheld <div> @elsehandheld   <div class="col-4"> @endhandheld
           <div class="form-group">
-              <label for="password">E-Mail:</label>
-              <input type="email" class="form-control" name="email"/>
-          </div>
-          <div class="form-group">
-              <label for="telephone">Téléphone:</label>
-              <input type="text" class="form-control" name="telephone"/>
+              <label for="Etablissement">Etablissement:</label>
+              <select name="etab">
+                @php
+                  $etbs = Etablissement::all();
+                @endphp
+                @foreach ($etbs as $etb)
+                  <option name="etab" value="{{$etb['id']}}">{{$etb['nom']}}</option>
+                @endforeach
+              </select>
           </div>
         </div>
           <button type="submit" class="btn btn-primary">Confirmer</button>
