@@ -15,7 +15,8 @@
 
 <div class="card"style="width:90%; margin: auto;">
   <div class="card-header">
-    <p style="font-size:20px">Factures
+    <p style="font-size:20px">Factures @if(Auth::user()->usertype=="super")<span class="float-right" ><a href="factures/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Facture +</a>
+    </span>@endif
     </p>
   </div>
                   <div class="table-responsive">
