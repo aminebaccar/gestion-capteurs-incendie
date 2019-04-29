@@ -43,7 +43,7 @@ class FactureController extends Controller
       'etab' => 'required',
     ]);
 
-    $facture = new Capteur([
+    $facture = new Facture([
       'quantite' => $qt,
       'etab' => $request->get('etab'),
       'montant' => $qt*0.75
