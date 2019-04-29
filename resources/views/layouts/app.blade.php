@@ -44,7 +44,7 @@
               });
               } );
     </script>
-    
+
 
 
 </head>
@@ -159,9 +159,13 @@
                                     </a>
                                 </li>
                                 @if(Auth::user()->usertype=="super" || Auth::user()->usertype=="admin")
-                                <li class="nav-item">
-                                    <a href="/capteurs" class="nav-link"><i class="fe fe-thermometer"></i> Capteurs</a>
-                                </li>@endif
+                                  <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fe fe-thermometer"></i> Capteurs</a>
+                                      <div class="dropdown-menu dropdown-menu-arrow">
+                                      <a href="/groupes" class="dropdown-item ">Groupes</a>
+                                      <a href="/capteurs" class="dropdown-item ">Capteurs</a>
+                                      </div>
+                                  </li>@endif
                                 <li class="nav-item dropdown">
                                     <a href="/historiques" class="nav-link"><i class="fe fe-file-text"></i> Historiques</a>
                                 </li>
