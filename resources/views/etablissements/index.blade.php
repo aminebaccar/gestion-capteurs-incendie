@@ -11,7 +11,7 @@
 
 </style>
 <script type="text/javascript">
-document.getElementById('s').addEventListener('click', function() {
+document.getElementsByName('s').addEventListener('click', function() {
   bootbox.confirm({
     message: "This is a confirm with custom button text and color! Do you like it?",
     buttons: {
@@ -83,7 +83,7 @@ document.getElementById('s').addEventListener('click', function() {
                             <form action="{{ route('etablissements.destroy', $etablissement->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-        <button id ="s" type='submit' style="	background: none;
+        <button type='submit' name ="s" style="	background: none;
   	           color: #9aa0ac;
               	border: none;
 	               padding: 0;
