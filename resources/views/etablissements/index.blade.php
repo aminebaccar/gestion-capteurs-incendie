@@ -85,7 +85,8 @@
               <script type="text/javascript">
               var aTags = document.getElementsByName("s");
     for (var i=0;i<aTags.length;i++){
-        aTags[i].addEventListener('click', function(){
+        aTags[i].addEventListener('click', function(e){
+          e.preventDefault();
           bootbox.confirm({
     message: "This is a confirm with custom button text and color! Do you like it?",
     buttons: {
