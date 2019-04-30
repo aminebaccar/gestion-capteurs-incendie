@@ -86,14 +86,11 @@
     for (var i=0;i<aTags.length;i++){
         aTags[i].addEventListener('click', function(e){
           e.preventDefault();
-          bootbox.dialog({
-            closeButton: false 
-        });
           bootbox.confirm({
     message: "This is a confirm with custom button text and color! Do you like it?",
+    closeButton: false,
     buttons: {
         confirm: {
-            closeButton: false,
             label: 'Yes',
             className: 'btn-success'
         },
