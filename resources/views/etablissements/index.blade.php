@@ -83,7 +83,7 @@ document.getElementById('s').addEventListener('click', function() {
                             <form action="{{ route('etablissements.destroy', $etablissement->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-        <button id ="s" type='submit' onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette établissement?')" style="	background: none;
+        <button id ="s" type='submit' style="	background: none;
   	           color: #9aa0ac;
               	border: none;
 	               padding: 0;
