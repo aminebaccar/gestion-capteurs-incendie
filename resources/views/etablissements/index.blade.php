@@ -10,6 +10,26 @@
 }
 
 </style>
+<script type="text/javascript">
+document.getElementById('s').addEventListener('click', function() {
+  bootbox.confirm({
+    message: "This is a confirm with custom button text and color! Do you like it?",
+    buttons: {
+        confirm: {
+            label: 'Yes',
+            className: 'btn-success'
+        },
+        cancel: {
+            label: 'No',
+            className: 'btn-danger'
+        }
+    },
+    callback: function (result) {
+        console.log('This was logged in the callback: ' + result);
+    }
+});
+});
+</script>
 
 <div class="uper">
   @if(session()->get('success'))
@@ -63,7 +83,7 @@
                             <form action="{{ route('etablissements.destroy', $etablissement->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-        <button type='submit' onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette établissement?')" style="	background: none;
+        <button id ="s" type='submit' onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette établissement?')" style="	background: none;
   	           color: #9aa0ac;
               	border: none;
 	               padding: 0;
