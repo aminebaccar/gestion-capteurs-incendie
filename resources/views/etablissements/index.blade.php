@@ -8,14 +8,6 @@
   .card-header {
    display: block;
 }
-.bootbox .modal-body h4 {
-  float: none;
-}
-
-.bootbox .modal-body .bootbox-close-button {
-  position: absolute;
-  right: 15px;
-}
 </style>
 
 
@@ -95,6 +87,7 @@
         aTags[i].addEventListener('click', function(e){
           e.preventDefault();
           bootbox.confirm("This is the default confirm!", function(result){
+            closeButton: false,
     console.log('This was logged in the callback: ' + result);
 });
         });
