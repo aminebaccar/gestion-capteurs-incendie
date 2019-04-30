@@ -8,7 +8,14 @@
   .card-header {
    display: block;
 }
+.bootbox .modal-header h4 {
+  float: none;
+}
 
+.bootbox .modal-header .close {
+  position: absolute;
+  right: 15px;
+}
 </style>
 
 
