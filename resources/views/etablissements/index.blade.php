@@ -84,23 +84,26 @@
 
 
               <script type="text/javascript">
-              document.getElementsByName('s').addEventListener('click', function() {
-                bootbox.confirm({
-                  message: "This is a confirm with custom button text and color! Do you like it?",
-                  buttons: {
-                      confirm: {
-                          label: 'Yes',
-                          className: 'btn-success'
-                      },
-                      cancel: {
-                          label: 'No',
-                          className: 'btn-danger'
-                      }
-                  },
-                  callback: function (result) {
-                      console.log('This was logged in the callback: ' + result);
-                  }
-              });
-              });
+              var aTags = document.getElementsByTagName("s");
+    for (var i=0;i<aTags.length;i++){
+        addEventListener(aTags[i], 'click', function(){
+          bootbox.confirm({
+    message: "This is a confirm with custom button text and color! Do you like it?",
+    buttons: {
+        confirm: {
+            label: 'Yes',
+            className: 'btn-success'
+        },
+        cancel: {
+            label: 'No',
+            className: 'btn-danger'
+        }
+    },
+    callback: function (result) {
+        console.log('This was logged in the callback: ' + result);
+    }
+});
+        });
+            }
               </script>
 @endsection
