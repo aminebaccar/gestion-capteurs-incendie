@@ -90,6 +90,7 @@
     message: "This is a confirm with custom button text and color! Do you like it?",
     buttons: {
         confirm: {
+          closeButton: false,
             label: 'Yes',
             className: 'btn-success'
         },
