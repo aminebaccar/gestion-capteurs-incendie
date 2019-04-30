@@ -4,10 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php use App\Capteur;?>
-    <?php use App\User;?>
-    <?php use App\Historique;?>
-     <?php use App\Etablissement;?>
+    <?php use App\Capteur;
+
+?>
+    <?php use App\User;
+
+?>
+    <?php use App\Historique;
+
+?>
+     <?php use App\Etablissement;
+
+?>
      <?php
      $us = Auth::user();
      $et = Etablissement::where('nom', $us['etab'])->first();
@@ -28,12 +36,15 @@
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/dataTables.bootstrap4.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/rowgroup/1.1.0/js/dataTables.rowGroup.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootbox@5.1.2/dist/bootbox.all.min.js"></script>
+
    <script>
     $(document).ready( function () {
 
@@ -77,8 +88,8 @@
                     <i class="fe fe-bell"></i>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" x-placement="bottom-end" style="position: absolute; transform: translate3d(-444px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
-                    <?php $historiques = Historique::where('consulte',null)
-                    ->orderBy('created_at','desc')
+                    <?php $historiques = Historique::where('consulte', null)
+                    ->orderBy('created_at', 'desc')
                     ->take(3)
                     ->get();?>
 
@@ -114,12 +125,13 @@
                                     <span class="text-default">{{ auth()->user()->email }}</span>
                                         <small class="text-muted d-block mt-1">
                                           <?php
-                                          if (auth()->user()->usertype=="normal")
-                                          echo "Utilisateur";
-                                          elseif (auth()->user()->usertype=="admin")
-                                            echo "Administrateur";
-                                          else
-                                            echo "Super Utilisateur";
+                                          if (auth()->user()->usertype=="normal") {
+                                              echo "Utilisateur";
+                                          } elseif (auth()->user()->usertype=="admin") {
+                                              echo "Administrateur";
+                                          } else {
+                                              echo "Super Utilisateur";
+                                          }
                                           ?>
                                         </small>
                                     </span>
