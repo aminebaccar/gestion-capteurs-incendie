@@ -86,9 +86,21 @@
     for (var i=0;i<aTags.length;i++){
         aTags[i].addEventListener('click', function(e){
           e.preventDefault();
-          bootbox.confirm("This is the default confirm!", function(result){
-            closeButton: false,
-    console.log('This was logged in the callback: ' + result);
+          bootbox.confirm({
+    message: "This is a confirm with custom button text and color! Do you like it?",
+    buttons: {
+        confirm: {
+            label: 'Yes',
+            className: 'btn-success'
+        },
+        cancel: {
+            label: 'No',
+            className: 'btn-danger'
+        }
+    },
+    callback: function (result) {
+        console.log('This was logged in the callback: ' + result);
+    }
 });
         });
             }
