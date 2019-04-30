@@ -12,7 +12,7 @@
   float: none;
 }
 
-.bootbox .modal-body .close {
+.bootbox .modal-body .bootbox-close-button {
   position: absolute;
   right: 15px;
 }
