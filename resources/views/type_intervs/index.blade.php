@@ -50,7 +50,7 @@
                             <form action="{{ route('type_intervs.destroy', $type_interv->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-        <button type='submit' class="btn btn-danger" name="s" data-balloon="Supprimer" data-balloon-pos="right" style="	background: none;
+        <button type='submit' class="btn btn-danger" name="s" data-balloon="Supprimer" data-balloon-pos="up"style="	background: none;
   	           color: #9aa0ac;
               	border: none;
 	               padding: 0;

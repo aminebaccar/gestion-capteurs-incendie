@@ -63,7 +63,7 @@
                             <form action="{{ route('etablissements.destroy', $etablissement->id) }}" method="POST" name="f">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-        <button type='submit' data-balloon="Supprimer" data-balloon-pos="right" name ="s" style="	background: none;
+        <button type='submit' data-balloon="Supprimer" data-balloon-pos="up" name ="s" style="	background: none;
   	           color: #9aa0ac;
               	border: none;
 	               padding: 0;

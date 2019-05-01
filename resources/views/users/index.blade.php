@@ -81,7 +81,7 @@
                           </td>
                           <td>
 
-                                <a class="icon" href="{{ route('users.block',$user->id)}}" <?php if ($user->bloque==1): ?> data-balloon="Débloquer" <?php else: ?> data-balloon="Bloquer" <?php endif;?> data-balloon-pos="right">
+                                <a class="icon" href="{{ route('users.block',$user->id)}}" <?php if ($user->bloque==1): ?> data-balloon="Débloquer" <?php else: ?> data-balloon="Bloquer" <?php endif;?> data-balloon-pos="up">
                                   <i <?php if ($user->bloque==1): ?> class="fe fe-unlock" <?php else: ?> class="fe fe-lock"  <?php endif;?> ></i>
                                 </a>
 

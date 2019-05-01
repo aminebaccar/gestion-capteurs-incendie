@@ -77,7 +77,7 @@ $(document).ready(function() {
                             <form action="{{ route('groupes.destroy', $groupe->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-<button type='submit' class="btn btn-danger" data-balloon="Supprimer" name="s" data-balloon-pos="right"  style="	background: none;
+<button type='submit' class="btn btn-danger" data-balloon="Supprimer" name="s" data-balloon-pos="up"  style="	background: none;
 	color: #9aa0ac;
 	border: none;
 	padding: 0;
