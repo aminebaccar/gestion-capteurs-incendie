@@ -87,7 +87,7 @@
         aTags[i].addEventListener('click', function(e){
           e.preventDefault();
           bootbox.confirm({
-    message: "This is a confirm with custom button text and color! Do you like it?",
+    message: "Êtes-vous sûr de vouloir supprimer cette établissement?",
     closeButton: false,
     buttons: {
         confirm: {
