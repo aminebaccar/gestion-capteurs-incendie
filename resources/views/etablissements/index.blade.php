@@ -60,7 +60,7 @@
                           </td>
                           <td>
 
-                            <form action="{{ route('etablissements.destroy', $etablissement->id) }}" method="POST">
+                            <form action="{{ route('etablissements.destroy', $etablissement->id) }}" method="POST" name="f">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
         <button type='submit' name ="s" style="	background: none;
@@ -100,7 +100,9 @@
         }
     },
     callback: function (result) {
-        console.log('This was logged in the callback: ' + result);
+      if(result){
+        aTags[i].form.submit();
+      }
     }
 });
         });
