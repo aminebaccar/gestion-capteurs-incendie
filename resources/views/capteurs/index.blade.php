@@ -129,13 +129,13 @@ $(document).ready(function() {
                             <form action="{{ route('capteurs.destroy', $capteur->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-<button type='submit' name="s"  class="btn btn-danger" style="	background: none;
+<button type='submit' name="s"  class="btn btn-danger" data-balloon="Supprimer" data-balloon-pos="right" style=" 	background: none;
 	color: #9aa0ac;
 	border: none;
 	padding: 0;
 	font: inherit;
 	cursor: pointer;
-	outline: inherit;" ><i class="fe fe-trash-2" data-balloon="Supprimer" style="color: inherit;" ></i></button>
+	outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></button>
 </form>
                           </td>
                         </tr>
