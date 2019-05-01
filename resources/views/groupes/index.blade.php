@@ -1,6 +1,6 @@
 @extends('layouts.app')
 <?php use App\Capteur;
-
+use App\Etablissement;
 ?>
 @section('content')
 <style>
@@ -63,13 +63,16 @@ $(document).ready(function() {
                       </thead>
                       <tbody>
                         @foreach($groupes as $groupe)
+                          @php
+                            $eggg = Etablissement::find($groupe->etab);
+                          @endphp
                           @if($groupe->type=="groupe")
                             @if($groupe->etab==Auth::user()->etab || Auth::user()->usertype=="super")
                           <tr>
                             @if(Auth::user()->usertype=="super")<td><span class="text-muted">{{$groupe->id}}</span></td>@endif
                               <td>{{$groupe->code_capteur}}</td>
                               <td>{{DB::table('capteurs')->where('parent', $groupe->id)->count('id')}}</td>
-                            @if(Auth::user()->usertype=="super")<td>{{$groupe->etab}}</td>@endif
+                            @if(Auth::user()->usertype=="super")<td>{{$eggg['nom']}}</td>@endif
                           <td>
                             <form action="{{ route('groupes.destroy', $groupe->id) }}" method="POST">
 {{ method_field('DELETE') }}
