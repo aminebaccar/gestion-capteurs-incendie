@@ -74,7 +74,7 @@ $(document).ready(function() {
                             <form action="{{ route('groupes.destroy', $groupe->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-<button type='submit' class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce groupe?')" style="	background: none;
+<button type='submit' class="btn btn-danger" name="s" style="	background: none;
 	color: #9aa0ac;
 	border: none;
 	padding: 0;
@@ -92,4 +92,31 @@ $(document).ready(function() {
                   </div>
                 </div>
               </div>
+              <script type="text/javascript">
+              let aTags = document.getElementsByName("s");
+    for (let i=0;i<aTags.length;i++){
+        aTags[i].addEventListener('click', function(e){
+          e.preventDefault();
+          bootbox.confirm({
+    message: "Êtes-vous sûr de vouloir supprimer ce groupe?",
+    closeButton: false,
+    buttons: {
+        confirm: {
+            label: 'Yes',
+            className: 'btn-success'
+        },
+        cancel: {
+            label: 'No',
+            className: 'btn-danger'
+        }
+    },
+    callback: function (result) {
+      if(result){
+        aTags[i].form.submit();
+      }
+    }
+});
+        });
+            }
+              </script>
 @endsection

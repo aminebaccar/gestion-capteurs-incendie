@@ -50,7 +50,7 @@
                             <form action="{{ route('type_intervs.destroy', $type_interv->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-        <button type='submit' class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce type intervention?')" style="	background: none;
+        <button type='submit' class="btn btn-danger" name="s" style="	background: none;
   	           color: #9aa0ac;
               	border: none;
 	               padding: 0;
@@ -66,4 +66,31 @@
                   </div>
                 </div>
               </div>
+              <script type="text/javascript">
+              let aTags = document.getElementsByName("s");
+    for (let i=0;i<aTags.length;i++){
+        aTags[i].addEventListener('click', function(e){
+          e.preventDefault();
+          bootbox.confirm({
+    message: "Êtes-vous sûr de vouloir supprimer ce type d'intervention?",
+    closeButton: false,
+    buttons: {
+        confirm: {
+            label: 'Yes',
+            className: 'btn-success'
+        },
+        cancel: {
+            label: 'No',
+            className: 'btn-danger'
+        }
+    },
+    callback: function (result) {
+      if(result){
+        aTags[i].form.submit();
+      }
+    }
+});
+        });
+            }
+              </script>
 @endsection
