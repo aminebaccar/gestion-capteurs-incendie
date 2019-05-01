@@ -135,7 +135,7 @@ $(document).ready(function() {
 	padding: 0;
 	font: inherit;
 	cursor: pointer;
-	outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></button>
+	outline: inherit;" ><i class="fe fe-trash-2" data-balloon="Supprimer" style="color: inherit;" ></i></button>
 </form>
                           </td>
                         </tr>

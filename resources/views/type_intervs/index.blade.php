@@ -56,7 +56,7 @@
 	               padding: 0;
 	                font: inherit;
 	                 cursor: pointer;
-	                  outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></button>
+	                  outline: inherit;" ><i data-balloon="Supprimer" class="fe fe-trash-2" style="color: inherit;" ></i></button>
                               </form>
                         </tr>
                         @endif
