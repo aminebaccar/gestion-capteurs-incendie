@@ -47,7 +47,7 @@ class TypeIntervController extends Controller
     ]);
 
     $type_interv->save();
-    return redirect('/type_intervs');
+    return redirect('/type_intervs')->with('success','Type Intervention ajouté avec succès');
     }
 
     /**
@@ -94,7 +94,7 @@ class TypeIntervController extends Controller
     {
       $type_interv = TypeInterv::find($id);
       $type_interv->delete();
-      return redirect('/type_intervs');
+      return redirect('/type_intervs')->with('success','Type Intervention supprimé avec succès');
     }
     public function __construct()
     {

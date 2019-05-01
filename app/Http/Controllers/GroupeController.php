@@ -49,7 +49,7 @@ class GroupeController extends Controller
     ]);
 
     $groupe->save();
-    return redirect('/groupes');
+    return redirect('/groupes')->with('success','Groupe ajouté avec succès');
     }
 
     /**
@@ -96,7 +96,7 @@ class GroupeController extends Controller
     {
       $groupe = Capteur::find($id);
       $groupe->delete();
-      return redirect('/groupes');
+      return redirect('/groupes')->with('success','Groupe supprimé avec succès');
     }
 
     public function __construct()

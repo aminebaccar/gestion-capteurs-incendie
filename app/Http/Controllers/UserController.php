@@ -53,7 +53,7 @@ class UserController extends Controller
               'etab' => $request->get('etab')
             ]);
             $user->save();
-            return redirect('/users');
+            return redirect('/users')->with('success','Utilisateur ajouté avec succès');
     }
 
     /**
@@ -102,7 +102,7 @@ class UserController extends Controller
     $user->usertype = $request->get('usertype');
     $user->save();
 
-    return redirect('/users');
+    return redirect('/users')->with('success','Utilisateur ajouté avec succès');
     }
 
     /**
@@ -116,7 +116,7 @@ class UserController extends Controller
       $user = User::find($id);
    $user->delete();
 
-   return redirect('/users')->with('success', 'Stock has been deleted Successfully');
+   return redirect('/users');
     }
 
     public function block($id){
@@ -124,11 +124,11 @@ class UserController extends Controller
       if ($user->bloque == 0){
       $user->bloque = 1 ;
       $user->save();
-      return redirect('/users');}
+      return redirect('/users')->with('success','Utilisateur bloqué avec succès');}
       else{
         $user->bloque = 0;
         $user->save();
-        return redirect('/users');
+        return redirect('/users')->with('success','Utilisateur debloqué avec succès');
       }
 
 

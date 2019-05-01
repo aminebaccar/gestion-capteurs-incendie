@@ -67,7 +67,7 @@ class InterventionController extends Controller
     ]);
 
     $intervention->save();
-    return redirect('/interventions');
+    return redirect('/interventions')->with('success','Intervention ajoutée avec succès');
     }
     else {
       return redirect('/interventions/create')->with('error',"Le capteur, l'utilisateur et le type d'intervention doivent tous avoir la même établisement");

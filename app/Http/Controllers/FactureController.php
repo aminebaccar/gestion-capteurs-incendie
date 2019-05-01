@@ -50,7 +50,7 @@ class FactureController extends Controller
     ]);
 
     $facture->save();
-    return redirect('/factures')->with('success',"Facture ajouté avec succès");
+    return redirect('/factures')->with('success',"Facture ajoutée avec succès");
     }
 
     /**

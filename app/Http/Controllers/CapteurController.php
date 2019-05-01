@@ -56,7 +56,7 @@ class CapteurController extends Controller
     ]);
 
     $capteur->save();
-    return redirect('/capteurs');
+    return redirect('/capteurs')->with('success','Capteur ajouté avec succès');
   }
   else{
     return redirect('/capteurs/create')->with('error',"Le groupe doit être dans l'établissement choisit");
@@ -106,7 +106,7 @@ class CapteurController extends Controller
     {
       $capteur = Capteur::find($id);
       $capteur->delete();
-      return redirect('/capteurs');
+      return redirect('/capteurs')->with('success','Capteur supprimé avec succès');
     }
     public function __construct()
     {

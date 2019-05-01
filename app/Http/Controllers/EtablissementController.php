@@ -50,7 +50,7 @@ class EtablissementController extends Controller
     ]);
 
     $etablissement->save();
-    return redirect('/etablissements');
+    return redirect('/etablissements')->with('success','Etablissement ajoutée avec succès');
     }
 
     /**
@@ -98,7 +98,7 @@ class EtablissementController extends Controller
     $etablissement->telephone = $request->get('telephone');
     $etablissement->save();
 
-    return redirect('/etablissements');
+    return redirect('/etablissements')->with('success','Etablissement modifiée avec succès');
     }
 
     /**

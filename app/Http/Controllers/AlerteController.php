@@ -19,7 +19,7 @@ class AlerteController extends Controller
     $historique = Historique::find($id);
     $historique->consulte = Auth::user()->id;
     $historique->save();
-    return redirect('/alertes');
+    return redirect('/alertes')->with('success','Alerte consulté avec succès');
   }
 
   public function __construct()
