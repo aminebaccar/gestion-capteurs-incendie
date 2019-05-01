@@ -63,13 +63,13 @@
                             <form action="{{ route('etablissements.destroy', $etablissement->id) }}" method="POST" name="f">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
-        <button type='submit' name ="s" style="	background: none;
+        <button type='submit' data-balloon="Supprimer" data-balloon-pos="right" name ="s" style="	background: none;
   	           color: #9aa0ac;
               	border: none;
 	               padding: 0;
 	                font: inherit;
 	                 cursor: pointer;
-	                  outline: inherit;" ><i class="fe fe-trash-2" data-balloon="Supprimer" style="color: inherit;" ></i></button>
+	                  outline: inherit;" ><i class="fe fe-trash-2" style="color: inherit;" ></i></button>
                               </form>
 
                           </td>
