@@ -82,8 +82,8 @@
               </div>
 
               <script type="text/javascript">
-              var aTags = document.getElementsByName("s");
-    for (var i=0;i<aTags.length;i++){
+              let aTags = document.getElementsByName("s");
+    for (let i=0;i<aTags.length;i++){
         aTags[i].addEventListener('click', function(e){
           e.preventDefault();
           bootbox.confirm({
