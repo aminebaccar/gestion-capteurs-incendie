@@ -75,7 +75,7 @@
                             {{$etab['nom']}}
                           </td>@endif
                           <td class="text-right">
-                            <a class="icon" href="{{ route('users.edit',$user->id)}}" data-balloon="Modifier" data-balloon-pos="right">
+                            <a class="icon" href="{{ route('users.edit',$user->id)}}" data-balloon="Modifier" data-balloon-pos="up">
                               <i class="fe fe-edit"></i>
                             </a>
                           </td>

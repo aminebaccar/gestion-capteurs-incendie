@@ -54,7 +54,7 @@
                           </td>
 
                           <td class="text-right">
-                            <a class="icon" href="{{ route('etablissements.edit',$etablissement->id)}}" data-balloon="Modifier" data-balloon-pos="right">
+                            <a class="icon" href="{{ route('etablissements.edit',$etablissement->id)}}" data-balloon="Modifier" data-balloon-pos="up">
                               <i class="fe fe-edit"></i>
                             </a>
                           </td>
