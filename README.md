@@ -9,7 +9,7 @@
 
 ### [Documentation Heroku](https://devcenter.heroku.com/articles/getting-started-with-php)
 
-###TO-DO list:
+### TO-DO list:
 
 - implementation groupe capteur --x
 - interface ajout groupe / interface ajout capteur --x
