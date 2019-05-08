@@ -2,7 +2,8 @@
 <?php use App\User;
 use App\Etablissement;
 use App\Capteur;
-use App\Intervention;?>
+use App\Intervention;
+use App\TypeInterv;?>
 @section('content')
 <style>
   .uper {
