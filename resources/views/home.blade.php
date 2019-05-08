@@ -17,7 +17,9 @@ use \App\Intervention; ?>
                         <div class="card">
                           <div class="card-body text-center">
                                     <div class="h5">Dernière Intervention</div>
-                                    <div style="font-size:25px; font-weight:bold;">{{ $results = Intervention::latest('created_at')->first()->created_at }} </div>
+                                    @if (Intervention::count()>0) <div style="font-size:25px; font-weight:bold;">{{ $results = Intervention::latest('created_at')->first()->created_at }} </div>
+                                    @else <div style="font-size:25px; font-weight:bold;">Aucune Intervention </div>
+                                    @endif
                                   </div></a>
                         </div>
                     </div>
