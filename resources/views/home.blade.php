@@ -16,8 +16,8 @@ use \App\Intervention; ?>
                     <div class="col-md-6"><a href="/interventions" style="color: #495057; text-decoration: none;">
                         <div class="card">
                           <div class="card-body text-center">
-                                    <div class="h5">Dernière Intervention</div>
-                                    @if (Intervention::count()>0) <div style="font-size:25px; font-weight:bold;">{{ $results = Intervention::latest('created_at')->first()->created_at }} </div>
+                                    @if <div class="h5">Dernière Intervention</div>
+                                    (Intervention::count()>0) <div style="font-size:25px; font-weight:bold;">{{ $results = Intervention::latest('created_at')->first()->created_at }} </div>
                                     @else <div style="font-size:25px; font-weight:bold;">Aucune Intervention </div>
                                     @endif
                                   </div></a>
