@@ -11,7 +11,6 @@ use \App\Intervention; ?>
               </h1>
             </div>
 
-
                   <div class="row row-cards row-deck" style="margin: auto; align:center;">
                     <div class="col-md-6"><a href="/interventions" style="color: #495057; text-decoration: none;">
                         <div class="card">

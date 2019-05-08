@@ -54,7 +54,7 @@ use App\Intervention;?>
                         @if(Auth::user()->usertype=="super")  <td><span class="text-muted">{{$intervention->id}}</span></td>@endif
                           <td>
                             @php
-                             $t = Intervention::find($intervention->type);
+                             $t = TypeInterv::find($intervention->type);
                             @endphp
                             {{$t['type']}}
                           </td>
