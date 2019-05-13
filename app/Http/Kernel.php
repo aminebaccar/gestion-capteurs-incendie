@@ -66,6 +66,7 @@ class Kernel extends HttpKernel
         'facture' => \App\Http\Middleware\FactureMiddleware::class,
         'type_interv' => \App\Http\Middleware\TypeIntervMiddleware::class,
         'etablissement' => \App\Http\Middleware\EtablissementMiddleware::class,
+        'blocage' => \App\Http\Middleware\BlocageMiddleware::class,
     ];
 
     /**

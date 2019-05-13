@@ -19,6 +19,9 @@ Route::get('/accesinterdit',function(){
   return view('accesinterdit');
 });
 
+Route::get('/blocage',function(){
+  return view('blocage');
+});
 
 Auth::routes();
 
