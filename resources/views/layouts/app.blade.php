@@ -37,7 +37,7 @@
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.js"></script>
@@ -55,10 +55,8 @@
               });
               } );
     </script>
-
-
-
 </head>
+
 <body>
     <div id="app">
         <div class="header py-4">
@@ -110,12 +108,6 @@
                     <a href="/alertes" class="dropdown-item text-center text-muted-dark">Tous les alertes</a>
                   </div>
                 </div>
-
-
-
-
-
-
                             <div class="dropdown">
                                 <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
                                     <span class="avatar" style="background-image: url(https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png)">
@@ -212,7 +204,7 @@
         @endauth
 
         <main class="py-4">
-          <div class="container" style="margin-bottom: 175px;">
+          <div class="container" style="margin-bottom: relative;">
             @yield('content')
           </div>
         </main>
