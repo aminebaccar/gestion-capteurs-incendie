@@ -61,7 +61,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="header py-4" style="height:300%;">
+        <div class="header py-4">
                 <div class="container">
                     <div class="d-flex">
                         <a class="header-brand" href="{{ route('home')}}">
@@ -211,7 +211,7 @@
             </div>
         @endauth
 
-        <main class="py-4">
+        <main class="py-4" style="min-height:100%;">
           <div class="container">
             @yield('content')
           </div>
