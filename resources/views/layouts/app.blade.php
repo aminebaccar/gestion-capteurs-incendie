@@ -61,7 +61,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="header py-4" style="min-height:100%;">
+        <div class="header py-4" style="height:100%;">
                 <div class="container">
                     <div class="d-flex">
                         <a class="header-brand" href="{{ route('home')}}">
