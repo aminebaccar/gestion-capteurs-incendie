@@ -211,7 +211,7 @@
             </div>
         @endauth
 
-        <main class="py-4" style="min-height:1000%;">
+        <main class="py-4">
           <div class="container" style="margin-bottom: 175px;">
             @yield('content')
           </div>
