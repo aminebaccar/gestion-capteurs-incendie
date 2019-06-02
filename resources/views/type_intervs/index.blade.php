@@ -22,8 +22,9 @@
 <div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
     <p style="font-size:20px">Types Intervention
-    <span class="float-right" ><a href="type_intervs/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Type Intervention +</a>
-    </span></p>
+    <span class="float-right" >@handheld<a href="type_intervs/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >+</a>
+    @elsehandheld <a href="type_intervs/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Type Intervention +</a>
+  @endhandheld</span></p>
   </div>
                   <div class="table-responsive">
                     <div class="container">

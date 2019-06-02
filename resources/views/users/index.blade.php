@@ -22,7 +22,8 @@
 <div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
     <p style="font-size:20px">Utilisateurs
-    <span class="float-right" ><a href="users/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Utilisateur +</a>
+    <span class="float-right" >@handheld<a href="users/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >+</a>
+    @elsehandheld <a href="users/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Utilisateur +</a>
     </span></p>
   </div>
                   <div class="table-responsive" width="100%">

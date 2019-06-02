@@ -25,8 +25,8 @@ use App\TypeInterv;?>
 
 <div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
-    <p style="font-size:20px">Interventions<span class="float-right" ><a href="interventions/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Intervention +</a>
-    </span>
+    <p style="font-size:20px">Interventions<span class="float-right" >@handheld<a href="interventions/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >+</a>
+    @elsehandheld <a href="interventions/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Intervention +</a>@endhandheld</span>
     </p>
   </div>
                   <div class="table-responsive">
