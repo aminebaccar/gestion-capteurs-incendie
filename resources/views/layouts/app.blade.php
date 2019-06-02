@@ -191,7 +191,7 @@
                                     <a href="/factures" class="nav-link {{ request()->is('factures') ? 'active' : ''}}"><i class="fe fe-dollar-sign"></i> Factures</a>
                                 </li>@endif
                                 @if(Auth::user()->usertype=="super" || Auth::user()->usertype=="admin")<li class="nav-item">
-                                    <a href="/users" class="nav-link {{ request()->is('utilisateurs') ? 'active' : ''}}"><i class="fe fe-user"></i> Utilisateurs</a>
+                                    <a href="/users" class="nav-link {{ request()->is('users') ? 'active' : ''}}"><i class="fe fe-user"></i> Utilisateurs</a>
                                 </li>@endif
                               @if(Auth::user()->usertype=="super")  <li class="nav-item">
                                     <a href="/etablissements" class="nav-link {{ request()->is('etablissements') ? 'active' : ''}}"><i class="fe fe-briefcase"></i> Établissements</a>
