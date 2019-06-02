@@ -171,7 +171,7 @@
                                       </div>
                                   </li>@endif
                                 <li class="nav-item dropdown">
-                                    <a href="/historiques" class="nav-link"><i class="fe fe-file-text"></i> Historiques</a>
+                                    <a href="/historiques" class="nav-link {{ request()->is('historiques') ? 'active' : ''}}"><i class="fe fe-file-text"></i> Historiques</a>
                                 </li>
                                 @if(Auth::user()->usertype=="super" || Auth::user()->usertype=="admin")
                                 <li class="nav-item dropdown">
