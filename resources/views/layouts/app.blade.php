@@ -82,7 +82,7 @@
 
 
                             <div class="dropdown show">
-                  <a class="nav-link icon" data-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link icon" data-toggle="dropdown" aria-expanded="false" style="padding-top: 10px;">
                     <i class="fe fe-bell"></i>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" x-placement="bottom-end" style="position: absolute; transform: translate3d(-444px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
