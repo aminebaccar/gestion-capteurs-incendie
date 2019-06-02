@@ -20,7 +20,7 @@
 
 <div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
-    <p style="font-size:20px">Établissements
+    @handheld <p style="font-size:20px">Établissements
     <span class="float-right" ><a href="etablissements/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Établissement +</a>
     </span></p>
   </div>
