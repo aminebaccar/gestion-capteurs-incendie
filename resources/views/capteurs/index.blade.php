@@ -78,8 +78,8 @@ $(document).ready(function() {
 <div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
     <p style="font-size:20px">Capteurs
-    <span class="float-right" ><a href="capteurs/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Capteur +</a>
-    </span></p>
+    <span class="float-right" >@handheld<a href="capteurs/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >+</a>
+    @elsehandheld<a href="capteurs/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Capteur +</a>@endhandheld</span></p>
   </div>
                   <div class="table-responsive">
                     <div class="container">
