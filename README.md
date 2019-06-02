@@ -22,10 +22,10 @@
 - utilisateur consultant remplacement id par nom -- x
 - verification validateurs controllers --x
 - ajout facture par super utilisateur --x
-- clé etrangeres
+- clé etrangeres --x 
 - verification nosignal
-- middleware blocage
-- highlight link
+- middleware blocage --x 
+- highlight link --x
 - alert icon apparait webview
-- boutons ajout affichage correct mobile
+- boutons ajout affichage correct mobile --x
 - enrichissement dashboard
