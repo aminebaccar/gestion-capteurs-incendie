@@ -177,7 +177,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link {{ request()->is('interventions') || request()->is('type_intervs')  ? 'active' : ''}} dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fe fe-file"></i> Interventions</a>
                                     <div class="dropdown-menu dropdown-menu-arrow">
-                                    <a href="/interventions" class="dropdown-item ">Interventions</a>
+                                    <a href="/interventions" class="dropdown-item {{ request()->is('interventions') ? 'active' : ''}} ">Interventions</a>
                                     <a href="/type_intervs" class="dropdown-item ">Types Intervention</a>
                                     </div>
                                 </li>
