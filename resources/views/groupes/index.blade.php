@@ -45,7 +45,7 @@ $(document).ready(function() {
   <div class="card-header">
     <p style="font-size:20px">Groupes
     <span class="float-right" >@handheld <a href="groupes/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >+</a>
-    @elsehandheld <a href="groupes/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Groupe +</a></span></p>
+    @elsehandheld <a href="groupes/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Groupe +</a>@endhandheld</span></p>
   </div>
                   <div class="table-responsive">
                     <div class="container">
