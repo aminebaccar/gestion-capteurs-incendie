@@ -81,7 +81,7 @@
 
 
 
-                            <div class="dropdown d-none d-md-flex show">
+                            <div class="dropdown d-md-flex show">
                   <a class="nav-link icon" data-toggle="dropdown" aria-expanded="false">
                     <i class="fe fe-bell"></i>
                   </a>
