@@ -20,9 +20,11 @@
 
 <div class="card" style="width:90%; margin: auto;">
   <div class="card-header">
-    @handheld <p style="font-size:20px">Établissements
-    <span class="float-right" ><a href="etablissements/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Établissement +</a>
-    </span></p>
+    <p style="font-size:20px">Établissements
+    @handheld <span class="float-right" ><a href="etablissements/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >Ajouter Établissement +</a>
+    </span>
+  @elsehandheld <span class="float-right" ><a href="etablissements/create" style="font-size:14px;" class="btn btn-outline-secondary btn-sm" >+</a>
+  </span> @endhandheld</p>
   </div>
                   <div class="table-responsive" width="100%">
                     <div class="container" >
