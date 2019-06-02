@@ -164,7 +164,7 @@
                                 </li>
                                 @if(Auth::user()->usertype=="super" || Auth::user()->usertype=="admin")
                                   <li class="nav-item dropdown">
-                                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fe fe-thermometer"></i> Capteurs</a>
+                                      <a class="nav-link {{ request()->is('capteurs') || request()->is('groupes')  ? 'active' : ''}} dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fe fe-thermometer"></i> Capteurs</a>
                                       <div class="dropdown-menu dropdown-menu-arrow">
                                       <a href="/groupes" class="dropdown-item ">Groupes</a>
                                       <a href="/capteurs" class="dropdown-item ">Capteurs</a>
@@ -177,7 +177,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link {{ request()->is('interventions') || request()->is('type_intervs')  ? 'active' : ''}} dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fe fe-file"></i> Interventions</a>
                                     <div class="dropdown-menu dropdown-menu-arrow">
-                                    <a href="/interventions" class="dropdown-item {{ request()->is('interventions') ? 'active' : ''}} ">Interventions</a>
+                                    <a href="/interventions" class="dropdown-item ">Interventions</a>
                                     <a href="/type_intervs" class="dropdown-item ">Types Intervention</a>
                                     </div>
                                 </li>
@@ -188,13 +188,13 @@
                                 @endif
                               @if(Auth::user()->usertype=="super" || Auth::user()->usertype=="admin")
                                 <li class="nav-item dropdown">
-                                    <a href="/factures" class="nav-link"><i class="fe fe-dollar-sign"></i> Factures</a>
+                                    <a href="/factures" class="nav-link {{ request()->is('factures') ? 'active' : ''}}"><i class="fe fe-dollar-sign"></i> Factures</a>
                                 </li>@endif
                                 @if(Auth::user()->usertype=="super" || Auth::user()->usertype=="admin")<li class="nav-item">
-                                    <a href="/users" class="nav-link"><i class="fe fe-user"></i> Utilisateurs</a>
+                                    <a href="/users" class="nav-link {{ request()->is('utilisateurs') ? 'active' : ''}}"><i class="fe fe-user"></i> Utilisateurs</a>
                                 </li>@endif
                               @if(Auth::user()->usertype=="super")  <li class="nav-item">
-                                    <a href="/etablissements" class="nav-link"><i class="fe fe-briefcase"></i> Établissements</a>
+                                    <a href="/etablissements" class="nav-link {{ request()->is('etablissements') ? 'active' : ''}}"><i class="fe fe-briefcase"></i> Établissements</a>
                                 </li>@endif
                             </ul>
                         </div>
