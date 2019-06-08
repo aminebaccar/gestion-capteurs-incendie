@@ -29,7 +29,7 @@
 
           $stmt->bindParam(':evenement', $this->evenement);
           $stmt->bindParam(':capteur', $this->capteur);
-          $stmt->bindParam(':capteur', $this->img);
+          $stmt->bindParam(':img', $this->img);
           $stmt->bindParam(':created_at', $this->created_at);
           $stmt->bindParam(':updated_at', $this->updated_at);
 
