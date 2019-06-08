@@ -16,7 +16,7 @@
     }
 
     public function create() {
-          $query = 'INSERT INTO ' . $this->table . ' SET evenement = :evenement, capteur = :capteur, img = :img consulte = null, created_at = :created_at, updated_at = :updated_at';
+          $query = 'INSERT INTO ' . $this->table . ' SET evenement = :evenement, capteur = :capteur, img = :img, consulte = null, created_at = :created_at, updated_at = :updated_at';
 
           $stmt = $this->conn->prepare($query);
 
