@@ -17,6 +17,7 @@
   $historique->evenement = $data->evenement;
   $historique->capteur = $data->capteur;
   $historique->consulte = null;
+  $historique->img = $data->img;
   $historique->created_at = $data->created_at;
   $historique->updated_at = $data->updated_at;
 
