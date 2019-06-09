@@ -16,7 +16,15 @@
     }
 
     public function create() {
-          $query = 'INSERT INTO ' . $this->table . ' SET evenement = :evenement, capteur = :capteur, img = :img, consulte = null, created_at = :created_at, updated_at = :updated_at';
+
+          $c = 'SELECT code_capteur from capteurs where id = :capteur';
+          $s = $this->conn->prepare($c);
+          $s->bindParam(':capteur', $this->capteur);
+          $s->execute();
+          $row = $s->fetch_assoc();
+          $code=$row['code_capteur'];
+
+          $query = 'INSERT INTO ' . $this->table . ' SET evenement = :evenement, capteur = '.$code.' , img = :img, consulte = null, created_at = :created_at, updated_at = :updated_at';
 
           $stmt = $this->conn->prepare($query);
 
@@ -28,7 +36,6 @@
           $this->updated_at = htmlspecialchars(strip_tags($this->updated_at));
 
           $stmt->bindParam(':evenement', $this->evenement);
-          $stmt->bindParam(':capteur', $this->capteur);
           $stmt->bindParam(':img', $this->img);
           $stmt->bindParam(':created_at', $this->created_at);
           $stmt->bindParam(':updated_at', $this->updated_at);
