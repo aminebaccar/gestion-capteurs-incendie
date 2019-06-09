@@ -41,6 +41,7 @@
                       </thead>
                       <tbody>
                         @foreach($type_intervs as $type_interv)
+                          @if ($type_interv->deleted!=1)
                           @php $et = Etablissement::find($type_interv['etab']); @endphp
                         @if ($type_interv->etab==Auth::user()->etab || Auth::user()->usertype=="super" )
                         <tr>
@@ -48,7 +49,7 @@
                           <td>{{$type_interv->type}}</td>
                           @if (Auth::user()->usertype=="super")<td>{{$et['nom']}}</td>@endif
                           <td>
-                            <form action="{{ route('type_intervs.destroy', $type_interv->id) }}" method="POST">
+                            <form action="{{ route('type_intervs.deleted', $type_interv->id) }}" method="POST">
 {{ method_field('DELETE') }}
 {{ csrf_field() }}
         <button type='submit' class="btn btn-danger" name="s" data-balloon="Supprimer" data-balloon-pos="up"style="	background: none;
@@ -61,6 +62,7 @@
                               </form>
                         </tr>
                         @endif
+                      @endif
                         @endforeach
                       </tbody>
                     </table>
