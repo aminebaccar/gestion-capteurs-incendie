@@ -43,7 +43,8 @@ class TypeIntervController extends Controller
 
     $type_interv = new TypeInterv([
       'type' => $request->get('type'),
-      'etab' => $request->get('etab')
+      'etab' => $request->get('etab'),
+      'deleted' => 0
     ]);
 
     $type_interv->save();
@@ -102,7 +103,7 @@ class TypeIntervController extends Controller
       $type->deleted = 1;
       return redirect('/type_intervs')->with('success',"Type d'intervention supprimé avec succès");
     }
-    
+
     public function __construct()
     {
     $this->middleware('auth');
