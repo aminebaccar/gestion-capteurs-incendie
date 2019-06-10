@@ -101,6 +101,7 @@ class TypeIntervController extends Controller
     public function deleted($id){
       $type = TypeInterv::find($id);
       $type->deleted = 1;
+      $type->save();
       return redirect('/type_intervs')->with('success',"Type d'intervention supprimé avec succès");
     }
 
