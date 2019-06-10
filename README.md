@@ -26,6 +26,6 @@
 - verification nosignal
 - middleware blocage --x 
 - highlight link --x
-- alert icon apparait webview
+- alert icon apparait webview --x
 - boutons ajout affichage correct mobile --x
 - enrichissement dashboard
