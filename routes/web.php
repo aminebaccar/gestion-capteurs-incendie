@@ -31,7 +31,6 @@ Route::get('users/block/{id}', 'UserController@block')->name('users.block');
 Route::post('alertes/consulte/{id}', 'AlerteController@consulte')->name('alertes.consulte');
 Route::get('alertes/consulte/{id}', 'AlerteController@consulte')->name('alertes.consulte');
 Route::post('type_intervs/deleted/{id}', 'TypeIntervController@deleted')->name('type_intervs.deleted');
-Route::get('type_intervs/deleted/{id}', 'TypeIntervController@deleted')->name('type_intervs.deleted');
 
 Route::resource('users', 'UserController');
 Route::resource('capteurs', 'CapteurController');
