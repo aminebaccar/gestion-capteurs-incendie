@@ -80,6 +80,7 @@
 	      'filters' => array(array("field" => "tag", "key" => "etab", "relation" => "=", "value" => $ror['id'])),
         'data' => array("foo" => "bar"),
         'large_icon' =>"ic_launcher_round.png",
+		'big_picture' => $historique->img;
         'contents' => $content
     );
 
