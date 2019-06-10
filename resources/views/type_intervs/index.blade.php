@@ -49,17 +49,10 @@
                           <td>{{$type_interv->type}}</td>
                           @if (Auth::user()->usertype=="super")<td>{{$et['nom']}}</td>@endif
                           <td>
-                            <form action="{{ route('type_intervs.deleted', $type_interv->id) }}" method="POST">
-{{ method_field('DELETE') }}
-{{ csrf_field() }}
-        <button type='submit' class="btn btn-danger" name="s" data-balloon="Supprimer" data-balloon-pos="up"style="	background: none;
-  	           color: #9aa0ac;
-              	border: none;
-	               padding: 0;
-	                font: inherit;
-	                 cursor: pointer;
-	                  outline: inherit;" ><i  class="fe fe-trash-2" style="color: inherit;" ></i></button>
-                              </form>
+                            <a class="icon" href="{{ route('type_intervs.deleted',$type_interv->id)}}" data-balloon="Supprimer" data-balloon-pos="up">
+                              <i class="fe fe-trash-2"></i>
+                            </a>
+                              </td>
                         </tr>
                         @endif
                       @endif
