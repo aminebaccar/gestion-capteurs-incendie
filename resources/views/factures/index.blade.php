@@ -65,7 +65,7 @@
         <!-- Specify details about the item that buyers will purchase. -->
         <input type="hidden" name="item_name" value=""> <!-- Add Description e.g your room type Required-->
         <input type="hidden" name="amount" value="{{$facture->montant}}"> <!-- Dynamically add Total Amount Required-->
-        <input type="hidden" name="currency_code" value=""> <!-- Update to your currency -->
+        <input type="hidden" name="currency_code" value="EUR"> <!-- Update to your currency -->
         <input id="invoice" type="hidden" value="" name="invoice"> <!-- Add Unique invoice for each transaction -->
         <input type="hidden" name="notify_url" value="www.yourwebsite.com/ipn.php"> <!-- Please add IPN URL You can use this service to automate back-office and administrative functions, including fulfilling orders, tracking customers, and providing status and other information related to transactions. -->
         <input type='hidden' name='cancel_return' value='' /> <!-- Take customers to this URL when they cancel their checkout -->
