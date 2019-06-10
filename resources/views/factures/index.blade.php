@@ -58,11 +58,21 @@
                           <td>
 
                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="JCKJ8DH6XQC2S">
-                            <input type="image" src="https://www.paypalobjects.com/fr_XC/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                            <img alt="" border="0" src="https://www.paypalobjects.com/fr_XC/i/scr/pixel.gif" width="1" height="1">
-                            </form>
+        <!-- Identify your business so that you can collect the payments. -->
+        <input type="hidden" name="business" value="Yourbusinessemail@paypal.com"> <!-- Add your PayPal Seller/Business email address Required-->
+        <!-- Specify a Buy Now button. -->
+        <input type="hidden" name="cmd" value="_xclick">
+        <!-- Specify details about the item that buyers will purchase. -->
+        <input type="hidden" name="item_name" value=""> <!-- Add Description e.g your room type Required-->
+        <input type="hidden" name="amount" value="{{$facture->montant}}"> <!-- Dynamically add Total Amount Required-->
+        <input type="hidden" name="currency_code" value=""> <!-- Update to your currency -->
+        <input id="invoice" type="hidden" value="" name="invoice"> <!-- Add Unique invoice for each transaction -->
+        <input type="hidden" name="notify_url" value="www.yourwebsite.com/ipn.php"> <!-- Please add IPN URL You can use this service to automate back-office and administrative functions, including fulfilling orders, tracking customers, and providing status and other information related to transactions. -->
+        <input type='hidden' name='cancel_return' value='' /> <!-- Take customers to this URL when they cancel their checkout -->
+        <input type='hidden' name='return' value='' /> <!-- Take customers to this URL when they finish their checkout  -->
+        <!-- Display the payment button. -->
+        <input type="image" name="submit" border="0" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
+    </form>
                           </td>
                         </tr>
                         @endif
