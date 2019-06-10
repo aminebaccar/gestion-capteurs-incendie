@@ -71,7 +71,7 @@
         <input type='hidden' name='cancel_return' value='' /> <!-- Take customers to this URL when they cancel their checkout -->
         <input type='hidden' name='return' value='' /> <!-- Take customers to this URL when they finish their checkout  -->
         <!-- Display the payment button. -->
-        <button type="submit" name="submit" class="btn btn-pill btn-warning">Payer</a>
+        <button type="submit" name="submit" class="btn btn-pill btn-warning">Payer</a> 
     </form>
                           </td>
                         </tr>
