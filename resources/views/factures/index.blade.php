@@ -71,7 +71,7 @@
         <input type='hidden' name='cancel_return' value='' /> <!-- Take customers to this URL when they cancel their checkout -->
         <input type='hidden' name='return' value='' /> <!-- Take customers to this URL when they finish their checkout  -->
         <!-- Display the payment button. -->
-        <input type="image" name="submit" border="0" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
+        <button type="submit" name="submit" class="btn btn-pill btn-warning">Payer</a>
     </form>
                           </td>
                         </tr>
