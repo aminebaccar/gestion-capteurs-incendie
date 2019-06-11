@@ -16,6 +16,11 @@
       {{ session()->get('success') }}
     </div><br />
   @endif
+  @if($_GET['success']!="")
+    <div class="alert alert-success">
+      {{ $_GET['success']}}
+    </div><br />
+  @endif
 
 <div class="card"style="width:90%; margin: auto;">
   <div class="card-header">
