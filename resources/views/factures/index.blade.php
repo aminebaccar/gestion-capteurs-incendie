@@ -16,13 +16,14 @@
       {{ session()->get('success') }}
     </div><br />
   @endif
-  @if($_GET['success']!="")
+  
+  @isset($_GET['success'])
+   @if($_GET['success']!="")
     <div class="alert alert-success">
       {{ $_GET['success']}}
     </div><br />
-  @else
-    <div></div>
-  @endif
+   @endif
+  @endisset
 
 <div class="card"style="width:90%; margin: auto;">
   <div class="card-header">
