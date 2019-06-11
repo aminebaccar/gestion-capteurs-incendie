@@ -203,7 +203,7 @@
             </div>
         @endauth
 
-        <main class="py-4" style="min-height:73vh;">
+        <main class="py-4" style="min-height:74vh;">
           <div class="container">
             @yield('content')
           </div>
