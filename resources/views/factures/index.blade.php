@@ -20,6 +20,8 @@
     <div class="alert alert-success">
       {{ $_GET['success']}}
     </div><br />
+  @else
+    <div></div>
   @endif
 
 <div class="card"style="width:90%; margin: auto;">
