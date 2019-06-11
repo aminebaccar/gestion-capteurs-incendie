@@ -101,13 +101,7 @@ $(document).ready(function() {
                         <?php
                         //$c = le groupe de $capteur
                         $c = Capteur::find($capteur['parent']);
-                        $etab = Etablissement::find($capteur['etab']);
-                        /*if ($c['type']=="capteur") {
-                            $etab = $c['etab'];
-                        } else {
-                            $etab = $capteur['etab'];
-                        }*/
-
+                        $etab = Etablissement::find($c['etab']);
                           ?>
                         @if(($current_user['etab']==$c['etab'] || Auth::user()->usertype=="super") && $capteur['type']=="capteur")
                         <tr>
