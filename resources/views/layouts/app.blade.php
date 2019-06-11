@@ -204,7 +204,7 @@
         @endauth
 
         <main class="py-4">
-          <div class="container" style="margin-bottom: 100%;">
+          <div class="container">
             @yield('content')
           </div>
         </main>
