@@ -3,7 +3,7 @@
   header('Content-Type: application/json');
   header('Access-Control-Allow-Methods: POST');
   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
-  
+
 	$servername = "api.tangorythm.com";
 	$username = "sdiuser";
 	$password = "Sdi2019user";
@@ -21,8 +21,8 @@ $subject = 'Paypal';
 $message = $e;
 
 
-mail($to, $subject, $message, $headers);
+mail($to, $subject, $message);
 
-  
-  
+
+
 ?>
