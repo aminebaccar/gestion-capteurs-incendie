@@ -22,5 +22,5 @@ if (mysqli_query($conn, $sql)) {
 }
 mysqli_close($conn);
 $location = "http://gestioncapteursincendie.herokuapp.com/factures";
-header("Location: $location?success='Facture payée avec succès'");
+header("Location: $location?success=Facture payée avec succès");
 ?>
