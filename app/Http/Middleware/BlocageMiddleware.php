@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 
 use Closure;
-use App\Http\Middleware\Auth;
+use Auth;
 class BlocageMiddleware
 {
     /**
