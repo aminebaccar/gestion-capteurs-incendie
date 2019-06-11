@@ -57,7 +57,7 @@
     </script>
 </head>
 
-<body style="height:100%">
+<body style="height:100%;">
     <div id="app">
         <div class="header py-4">
                 <div class="container">
