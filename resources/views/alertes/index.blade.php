@@ -1,5 +1,7 @@
 @extends('layouts.app')
-<?php use App\Capteur;$s = Auth::user();?>
+<?php use App\Capteur;
+use App\Etablissement;
+$s = Auth::user();?>
 @section('content')
 <style>
   .uper {
@@ -37,7 +39,10 @@
                       <tbody>
 
                         @foreach($historiques as $historique)
-                        <?php $capteur = Capteur::find($historique->capteur);?>
+                        <?php $capteur = Capteur::find($historique->capteur);
+                        $groupe = $capteur['parent'];
+                        $et = Etablissement::find($groupe['etab']);
+                        ?>
                         @if($s['etab']==$capteur['etab'] || $s['usertype']=="super" )
                         <tr>
                           @if($s['usertype']=="super")<td><span class="text-muted">{{$historique->id}}</span></td>@endif
@@ -48,7 +53,7 @@
                           <td>
                             {{$historique->capteur}}
                           </td>
-                          @if($s['usertype']=="super") <td> {{$capteur['etab']}} </td> @endif
+                          @if($s['usertype']=="super") <td> {{$et['nom']}} </td> @endif
                         <td>
                           <a class="icon" href="{{ route('alertes.consulte',$historique->id)}}"><button class="btn btn-danger"><i class="fe fe-check"></i></button></a>
                         </td>
