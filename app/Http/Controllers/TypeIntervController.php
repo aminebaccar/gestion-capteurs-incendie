@@ -108,5 +108,6 @@ class TypeIntervController extends Controller
     public function __construct()
     {
     $this->middleware('auth');
+    $this->middleware('blocage');
     $this->middleware('type_interv');}
 }

@@ -138,5 +138,7 @@ class UserController extends Controller
 {
     $this->middleware('auth');
     $this->middleware('usertype');
+    $this->middleware('blocage');
+
 }
 }

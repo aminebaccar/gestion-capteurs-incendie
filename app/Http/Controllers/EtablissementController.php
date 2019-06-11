@@ -116,5 +116,7 @@ class EtablissementController extends Controller
     public function __construct()
     {
     $this->middleware('auth');
-    $this->middleware('etablissement');}
+    $this->middleware('etablissement');
+    $this->middleware('blocage');
+}
 }

@@ -100,5 +100,7 @@ class FactureController extends Controller
     public function __construct()
     {
     $this->middleware('auth');
-    $this->middleware('facture');}
+    $this->middleware('facture');
+    $this->middleware('blocage');
+}
 }

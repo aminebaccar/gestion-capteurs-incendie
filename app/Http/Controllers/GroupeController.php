@@ -102,5 +102,7 @@ class GroupeController extends Controller
     public function __construct()
     {
     $this->middleware('auth');
-    $this->middleware('capteur');}
+    $this->middleware('capteur');
+    $this->middleware('blocage');
+}
 }
