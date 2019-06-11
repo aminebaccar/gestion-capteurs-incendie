@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}" style="min-height:100%; position:relative;">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,7 +57,7 @@
     </script>
 </head>
 
-<body style="min-height:100%">
+<body style="height:100%">
     <div id="app">
         <div class="header py-4">
                 <div class="container">
