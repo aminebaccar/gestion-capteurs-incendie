@@ -214,21 +214,20 @@
     padding-bottom: 10px;
     bottom:0;
     width:100%;">
-        <div class="container">
-          <div class="row align-items-center flex-row-reverse">
-            <div class="col-auto ml-lg-auto">
-              <div class="row align-items-center">
-                <div class="col-auto">
-                </div>
+      <div class="container">
+        <div class="row align-items-center flex-row-reverse">
+          <div class="col-auto ml-lg-auto">
+            <div class="row align-items-center">
+              <div class="col-auto">
               </div>
             </div>
-            <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-              Copyright © 2019 <a href=".">GCI</a>. All rights reserved.
-			  <input id="etb" name="etb" type="hidden" value="{{$et['id']}}">
-
-            </div>
           </div>
-        </div>
-      </footer>
+          <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
+            Copyright © 2019 <a href=".">GCI</a>. All rights reserved.
+        <input id="etb" name="etb" type="hidden" value="{{$et['id']}}">
+
+          </div>
+        </div>      </div>
+    </footer>
 </body>
 </html>
