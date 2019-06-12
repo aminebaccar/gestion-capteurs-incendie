@@ -18,7 +18,7 @@
 ?>
      <?php
      $us = Auth::user();
-     $et = Etablissement::where('nom', $us['etab'])->first();
+     $et = Etablissement::where('id', $us['etab'])->first();
 
      ?>
 
