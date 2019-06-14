@@ -16,7 +16,7 @@ if (!$conn) {
 }
 
   $data = json_decode(file_get_contents("php://input"));
-  
+  var_dump $data;
   $to      = 'mohamedaminebaccar@gmail.com';
 $subject = 'Paypal';
 $message = $data;
