@@ -14,6 +14,8 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+
+echo $data;
   $data = json_decode(file_get_contents("php://input"));
   $to      = 'mohamedaminebaccar@gmail.com';
 $subject = 'Paypal';
