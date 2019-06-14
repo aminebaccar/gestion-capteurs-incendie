@@ -15,14 +15,10 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
   $data = json_decode(file_get_contents("php://input"));
-  $e = $data->event_type;
   $to      = 'mohamedaminebaccar@gmail.com';
 $subject = 'Paypal';
-$message = $e;
-
+$message = $data;
 
 mail($to, $subject, $message);
-
-
 
 ?>

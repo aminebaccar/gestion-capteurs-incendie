@@ -71,7 +71,7 @@
         <!-- Specify a Buy Now button. -->
         <input type="hidden" name="cmd" value="_xclick">
         <!-- Specify details about the item that buyers will purchase. -->
-        <input type="hidden" name="item_name" value=""> <!-- Add Description e.g your room type Required-->
+        <input type="hidden" name="item_name" value="{{$facture->id}}"> <!-- Add Description e.g your room type Required-->
         <input type="hidden" name="amount" value="{{$facture->montant}}"> <!-- Dynamically add Total Amount Required-->
         <input type="hidden" name="currency_code" value="EUR"> <!-- Update to your currency -->
         <input id="invoice" type="hidden" value="" name="invoice"> <!-- Add Unique invoice for each transaction -->
