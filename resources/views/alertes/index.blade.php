@@ -1,6 +1,7 @@
 @extends('layouts.app')
 <?php use App\Capteur;
 use App\Etablissement;
+use App\Capteur;
 $s = Auth::user();?>
 @section('content')
 <style>
@@ -42,6 +43,7 @@ $s = Auth::user();?>
                         <?php $capteur = Capteur::find($historique->capteur);
                         $groupe = $capteur['parent'];
                         $et = Etablissement::find($groupe['etab']);
+						$c = Capteur::find($historique->capteur);
                         ?>
                         @if($s['etab']==$capteur['etab'] || $s['usertype']=="super" )
                         <tr>
@@ -51,7 +53,7 @@ $s = Auth::user();?>
                             {{$historique->created_at}}
                           </td>
                           <td>
-                            {{$historique->capteur}}
+                            {{$c['code_capteur']}}
                           </td>
                           @if($s['usertype']=="super") <td> {{$et['nom']}} </td> @endif
                         <td>
