@@ -75,7 +75,7 @@
         <input type="hidden" name="amount" value="{{$facture->montant}}"> <!-- Dynamically add Total Amount Required-->
         <input type="hidden" name="currency_code" value="EUR"> <!-- Update to your currency -->
         <input id="invoice" type="hidden" value="" name="invoice"> <!-- Add Unique invoice for each transaction -->
-        <input type="hidden" name="notify_url" value="http://gestioncapteursincendie.herokuapp.com/ipn/ipn.php"> <!-- Please add IPN URL You can use this service to automate back-office and administrative functions, including fulfilling orders, tracking customers, and providing status and other information related to transactions. -->
+        <input type="hidden" name="notify_url" value="https://gestioncapteursincendie.herokuapp.com/ipn/ipn.php"> <!-- Please add IPN URL You can use this service to automate back-office and administrative functions, including fulfilling orders, tracking customers, and providing status and other information related to transactions. -->
         <input type="hidden" name="custom" value="{{$facture->id}}">
 		<input type='hidden' name='cancel_return' value='' /> <!-- Take customers to this URL when they cancel their checkout -->
         <input type='hidden' name='return' value='' /> <!-- Take customers to this URL when they finish their checkout  -->
