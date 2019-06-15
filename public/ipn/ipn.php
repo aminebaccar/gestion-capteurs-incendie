@@ -8,6 +8,7 @@ $ipn = new PaypalIPN();
 // Use the sandbox endpoint during testing.
 $ipn->useSandbox();
 $verified = $ipn->verifyIPN();
+error_log("printed: ".$verified);
 if ($verified) {
     $servername = "api.tangorythm.com";
 	$username = "sdiuser";
