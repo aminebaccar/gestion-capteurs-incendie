@@ -64,7 +64,7 @@
                           </td>
                           @endif
                           <td>
-
+@if ($historique->paie==0)
                             <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank">
         <!-- Identify your business so that you can collect the payments. -->
         <input type="hidden" name="business" value="besrour_2010@live.com"> <!-- Add your PayPal Seller/Business email address Required-->
@@ -81,7 +81,9 @@
         <input type='hidden' name='return' value='' /> <!-- Take customers to this URL when they finish their checkout  -->
         <!-- Display the payment button. -->
         <button type="submit" name="submit" class="btn btn-pill btn-warning"><i class="fa fa-facebook" data-toggle="tooltip" title="payment payment-paypal-dark"></i>Payer</button>
-    </form>
+    </form>@else
+		<span class="status-icon bg-success"></span>Payée
+	@endif
                           </td>
                         </tr>
                         @endif

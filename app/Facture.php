@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Facture extends Model
 {
   protected $fillable = [
-    "quantite","etab","montant"
+    "quantite","etab","montant","paie"
   ];
 }
