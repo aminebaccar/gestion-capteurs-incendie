@@ -64,7 +64,7 @@
                           </td>
                           @endif
                           <td>
-@if ($historique->paie==0)
+@if ($facture->paie==0)
                             <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank">
         <!-- Identify your business so that you can collect the payments. -->
         <input type="hidden" name="business" value="besrour_2010@live.com"> <!-- Add your PayPal Seller/Business email address Required-->
