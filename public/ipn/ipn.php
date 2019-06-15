@@ -23,7 +23,7 @@ if (!$conn) {
 }
  
  $sql = "UPDATE factures
-SET paie = 5
+SET paie = 1
 WHERE id = ".$idFacture."; ";
 
 if (mysqli_query($conn, $sql)) {
