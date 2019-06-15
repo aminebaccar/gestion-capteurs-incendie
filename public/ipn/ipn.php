@@ -5,7 +5,7 @@ require('PaypalIPN.php');
 use PaypalIPN;
 
 $ipn = new PaypalIPN();
-
+var_dump "var_dump ipn: ".$ipn;
 // Use the sandbox endpoint during testing.
 $ipn->useSandbox();
 $verified = $ipn->verifyIPN();
@@ -14,7 +14,7 @@ if ($verified) {
 	$username = "sdiuser";
 	$password = "Sdi2019user";
 	$dbname = "sdi";
-	$idFacture = $_POST['idFacture'];
+	$idFacture = $_POST['custom'];
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
