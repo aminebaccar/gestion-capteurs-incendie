@@ -80,11 +80,20 @@
 		<input type='hidden' name='cancel_return' value='' /> <!-- Take customers to this URL when they cancel their checkout -->
         <input type='hidden' name='return' value='' /> <!-- Take customers to this URL when they finish their checkout  -->
         <!-- Display the payment button. -->
-        <button type="submit" name="submit" class="btn btn-pill btn-warning"><i class="fa fa-facebook" data-toggle="tooltip" title="payment payment-paypal-dark"></i>Payer</button>
+        <button type="submit" name="submit" class="btn btn-pill btn-warning">Payer</button>
     </form>@else
 		<span class="status-icon bg-success"></span>Payée
 	@endif
                           </td>
+						  <td>
+						  <form action="https://gestioncapteursincendie.herokuapp.com/invoice.php" method="post" target="_blank">
+						  <input type="hidden" name="etab" value="{{$etab['nom']}}">
+						<input type="hidden" name="date" value="{{$facture->created_at}}">
+						<input type="hidden" name="montant" value="{{$facture->montant}}">
+						<input type="hidden" name="id" value ="{{$facture->id}}">
+						<button type ="submit" name="submit" class="btn btn-pill btn-warning">Afficher</button>
+						  </form>
+						  </td>
                         </tr>
                         @endif
                         @endforeach
