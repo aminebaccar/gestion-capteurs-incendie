@@ -8,7 +8,7 @@ $id = $_POST['id'];
 
 curl_setopt($ch, CURLOPT_URL, 'https://invoice-generator.com');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"from\":\"TangoRythm\",\"to\":\"$etab\",\"logo\":\"https://www.zupimages.net/up/17/10/elu9.jpg\",\"number\":1,\"date\":\"$date\",\"items\":[{\"name\":\"Pack SMS\",\"quantity\":$id,\"unit_cost\":$montant}]}");
+curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"from\":\"TangoRythm\",\"to\":\"$etab\",\"logo\":\"https://www.zupimages.net/up/17/10/elu9.jpg\",\"number\":$id,\"date\":\"$date\",\"items\":[{\"name\":\"Pack SMS\",\"quantity\":1,\"unit_cost\":$montant}]}");
 curl_setopt($ch, CURLOPT_POST, 1);
 
 $headers = array();
