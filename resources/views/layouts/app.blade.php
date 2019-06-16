@@ -210,7 +210,7 @@
 		 <main class="py-4" style="min-height:87.65vh;">
 		@elsehandheld
 		@if ($actual_link == "http://gestioncapteursincendie.herokuapp.com/login")
-        <main class="py-4" style="min-height:80.3vh;">
+        <main class="py-4" style="min-height:82.199vh;">
 	@else
 		 <main class="py-4" style="min-height:74vh;">
 	 @endif
