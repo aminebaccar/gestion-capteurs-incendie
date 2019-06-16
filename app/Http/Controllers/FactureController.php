@@ -51,7 +51,7 @@ class FactureController extends Controller
     $facture = new Facture([
       'quantite' => $qt,
       'etab' => $request->get('etab'),
-      'montant' => $qt*$p;
+      'montant' => $qt*$p
     ]);
 
     $facture->save();
