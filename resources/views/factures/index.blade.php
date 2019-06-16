@@ -80,7 +80,7 @@
 		<input type='hidden' name='cancel_return' value='' /> <!-- Take customers to this URL when they cancel their checkout -->
         <input type='hidden' name='return' value='' /> <!-- Take customers to this URL when they finish their checkout  -->
         <!-- Display the payment button. -->
-		<button type="submit" name="submit" class=" btn-floating btn-indigo"><i class="fas fa-credit-card"></i></button>
+		<button type="submit" name="submit" class="btn btn-outline-warning">Payer</button>
     </form>@else
 		<span class="status-icon bg-success"></span>Payée
 	@endif
@@ -91,7 +91,7 @@
 						<input type="hidden" name="date" value="{{$facture->created_at}}">
 						<input type="hidden" name="montant" value="{{$facture->montant}}">
 						<input type="hidden" name="id" value ="{{$facture->id}}">
-						<button type ="submit" name="submit" class=" btn-floating btn-warning"><i class="fas fa-file-invoice-dollar"></i></button>
+						<button type ="submit" name="submit" class="btn btn-outline-info">Voir</button>
 						  </form>
 						  </td>
                         </tr>
