@@ -203,7 +203,18 @@
             </div>
         @endauth
 
-        <main class="py-4" style="min-height:74vh;">
+		@php 
+		$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+		@endphp
+		@handheld
+		 <main class="py-4" style="min-height:100vh;">
+		@elsehandheld
+		@if ($actual_link == "http://gestioncapteursincendie.herokuapp.com/login")
+        <main class="py-4" style="min-height:80.3vh;">
+	@else
+		 <main class="py-4" style="min-height:74vh;">
+	 @endif
+	 @endhandheld
           <div class="container">
             @yield('content')
           </div>
