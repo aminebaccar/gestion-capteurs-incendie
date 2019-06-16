@@ -45,7 +45,7 @@
                           <th>Montant</th>
                           @if (Auth::user()->usertype=="super")  <th>Etablissement</th> @endif
                           <th>Paiement</th>
-
+						  <th>Facture</th>
                         </tr>
                       </thead>
                       <tbody>

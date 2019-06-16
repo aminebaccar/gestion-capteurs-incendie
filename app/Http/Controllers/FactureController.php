@@ -14,7 +14,9 @@ class FactureController extends Controller
      */
     public function index()
     {
-      $factures = Facture::all();
+      $factures = Facture::orderBy('created_at','DESC')
+	  ->orderBy('paie','ASC')
+	  ->get();
 
       return view('factures.index', compact('factures'));
     }
