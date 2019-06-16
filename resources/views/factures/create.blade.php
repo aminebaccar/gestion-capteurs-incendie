@@ -31,6 +31,11 @@
               <label for="quantite">Quantité:</label>
               <input type="text" class="form-control" name="quantite"/>
             </div>
+			<div class="form-group">
+              @csrf
+              <label for="prix">Prix d'unité:</label>
+              <input type="text" class="form-control" name="prix"/>
+            </div>
           <div class="form-group">
               <label for="Etablissement">Etablissement:</label>
               <select class="form-control" name="etab">

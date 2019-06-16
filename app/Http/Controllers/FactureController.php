@@ -39,16 +39,19 @@ class FactureController extends Controller
      */
     public function store(Request $request)
     {
-      $qt = $request->get('quantite');
       $request->validate([
       'quantite'=>'required|integer',
       'etab' => 'required',
+	  'prix' => 'required|numeric'
     ]);
-
+	
+	  $qt = $request->get('quantite');
+	  $p = $request->get('prix');
+	  
     $facture = new Facture([
       'quantite' => $qt,
       'etab' => $request->get('etab'),
-      'montant' => $qt*0.75
+      'montant' => $qt*$p;
     ]);
 
     $facture->save();
