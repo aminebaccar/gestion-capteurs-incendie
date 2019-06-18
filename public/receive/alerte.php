@@ -68,7 +68,8 @@ if (!$conn) {
 	 else
 	    { 
  		echo "Error: " . $sqlet . "<br>" . mysqli_error($conn);
-		 } 
+		 }
+  }		 
 	else {
 		echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
