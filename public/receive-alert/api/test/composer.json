@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ismaeltoe/osms": "^2.0"
+    }
+}
