@@ -41,7 +41,7 @@ use App\Etablissement;?>
                         $user = User::find($historique->consulte);
                         $groupe = Capteur::find($capteur->parent);
                         $etab = Etablissement::find($groupe->etab);?>
-                        @if(Auth::user()->etab==$capteur['etab'] || Auth::user()->usertype=="super" )
+                        @if(Auth::user()->etab==$etab['id'] || Auth::user()->usertype=="super" )
 
                         <tr>
                           @if(Auth::user()->usertype=="super")<td><span class="text-muted">{{$historique->id}}</span></td>@endif
