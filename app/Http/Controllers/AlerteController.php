@@ -21,7 +21,7 @@ class AlerteController extends Controller
     $historique->consulte = Auth::user()->id;
 	$capteur = Capteur::find($historique->capteur);
 	$capteur->etat = "fonctionnant";
-	dd($capteur);
+	var_dump($capteur);
     $historique->save();
     return redirect('/alertes')->with('success','Alerte consulté avec succès');
   }
