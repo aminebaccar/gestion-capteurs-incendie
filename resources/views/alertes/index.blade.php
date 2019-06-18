@@ -44,7 +44,7 @@ $s = Auth::user();?>
                         $groupe = Capteur::find($capteur['parent']);
                         $et = Etablissement::find($groupe['etab']);
                         ?>
-                        @if($s['etab']==$capteur['etab'] || $s['usertype']=="super" )
+                        @if($s['etab']==$et['id'] || $s['usertype']=="super" )
                         <tr>
                           @if($s['usertype']=="super")<td><span class="text-muted">{{$historique->id}}</span></td>@endif
                           <td>{{$historique->evenement}}</td>
