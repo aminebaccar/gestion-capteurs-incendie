@@ -52,7 +52,7 @@ if (!$conn) {
  //calculate minutes between time now and last alert
  $dif = (time()-date("U",strtotime($date)))/60;
 
-//if($dif>60){
+ //if($dif>60){
  //insert alert line into historiques table
  $sql= "INSERT INTO historiques (evenement, capteur, img, created_at)
  VALUES ('" . $data->evenement ."', ".$capteur.", '". $data->img ."','". $data->created_at."')";
@@ -60,8 +60,17 @@ if (!$conn) {
  //check if query executed successfully
   if (mysqli_query($conn, $sql)) {
     echo "alerte ajouté avec succès";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+	
+	$sqlet ="update capteurs set etat = 'incendie' where id = $capteur";
+	 if (mysqli_query($conn, $sqlet)) {
+    echo "etat changé avec succès";
+	 }
+	 else
+	    { 
+ 		echo "Error: " . $sqlet . "<br>" . mysqli_error($conn);
+		 } 
+	else {
+		echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
  
  ///////////////////////SMS API /////////////////
@@ -120,7 +129,7 @@ print("\n\nJSON received:\n");
 print($return);
 print("\n");
 ///////////////////////////////////PUSH NOTIFICATION/////////////////////////
-/* }
+ /*}
  else
  { echo "une alerte par heure";}*/
 

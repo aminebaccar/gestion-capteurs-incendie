@@ -73,17 +73,18 @@ if (!$conn) {
  //check if query executed successfully
   if (mysqli_query($conn, $sql)) {
     echo "alerte ajouté avec succès";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-
-$sqlp= 'update capteurs set etat = "Pas de signal where" id = '.$row['id'];
+	
+	$sqlp= 'update capteurs set etat = "Pas de signal" where id = '.$row['id'];
  
  //check if query executed successfully
   if (mysqli_query($conn, $sqlp)) {
     echo "état capteur mis a jour avec succès";
 } else {
     echo "Error: " . $sqlp . "<br>" . mysqli_error($conn);
+}
+
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
  ///////////////////////SMS API /////////////////
