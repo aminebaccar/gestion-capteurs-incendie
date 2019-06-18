@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Historique;
+use App\Capteur;
 use Auth;
 
 class AlerteController extends Controller
@@ -18,6 +19,8 @@ class AlerteController extends Controller
   public function consulte($id){
     $historique = Historique::find($id);
     $historique->consulte = Auth::user()->id;
+	$capteur = Capteur::find($historique->capteur);
+	$capteur->etat = "fonctionnant";
     $historique->save();
     return redirect('/alertes')->with('success','Alerte consulté avec succès');
   }
