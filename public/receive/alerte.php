@@ -52,7 +52,7 @@ if (!$conn) {
  //calculate minutes between time now and last alert
  $dif = (time()-date("U",strtotime($date)))/60;
 
- if($dif>60){
+//if($dif>60){
  //insert alert line into historiques table
  $sql= "INSERT INTO historiques (evenement, capteur, img, created_at)
  VALUES ('" . $data->evenement ."', ".$capteur.", '". $data->img ."','". $data->created_at."')";
@@ -120,8 +120,8 @@ print("\n\nJSON received:\n");
 print($return);
 print("\n");
 ///////////////////////////////////PUSH NOTIFICATION/////////////////////////
- }
+/* }
  else
- { echo "une alerte par heure";}
+ { echo "une alerte par heure";}*/
 
 ?>
