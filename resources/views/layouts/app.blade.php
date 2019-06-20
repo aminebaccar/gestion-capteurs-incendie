@@ -113,7 +113,7 @@
 					@endif
                     @endif
                     @endforeach <?php
-					else {
+					}else {
 						?>
 						<a href="#" class="dropdown-item d-flex">
                       <div>
