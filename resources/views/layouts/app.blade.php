@@ -86,10 +86,19 @@
                     <i class="fe fe-bell"></i>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" x-placement="bottom-end" style="position: absolute; transform: translate3d(-444px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
-                    <?php $historiques = Historique::where('consulte', null)
+                    <?php 
+					
+					if(auth::user()->usertype=="super"){
+					$historiques = Historique::where('consulte', null)
                     ->orderBy('created_at', 'desc')
                     ->take(3)
-                    ->get();?>
+                    ->get();}
+					else{$historiques = Historique::where('consulte', null)
+					->where('etab',auth::user->usertype)
+                    ->orderBy('created_at', 'desc')
+                    ->take(3)
+                    ->get();}
+						?>
 
                     @foreach($historiques as $historique)
                     <?php $capt = Capteur::find($historique['capteur']);?>

@@ -42,7 +42,7 @@ $s = Auth::user();?>
                         @foreach($historiques as $historique)
                         <?php $capteur = Capteur::find($historique->capteur);
                         $groupe = Capteur::find($capteur['parent']);
-                        $et = Etablissement::find($groupe['etab']);
+                         $et = Etablissement::find($groupe['etab']);
                         ?>
                         @if($s['etab']==$et['id'] || $s['usertype']=="super" )
                         <tr>
