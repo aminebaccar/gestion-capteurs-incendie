@@ -120,7 +120,7 @@
                         Aucune alerte pour le moment
                       </div>
                     </a>
-						
+					<?php } ?>
                     <div class="dropdown-divider"></div>
                     <a href="/alertes" class="dropdown-item text-center text-muted-dark">Tous les alertes</a>
                   </div>
