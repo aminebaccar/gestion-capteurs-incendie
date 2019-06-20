@@ -87,30 +87,28 @@
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" x-placement="bottom-end" style="position: absolute; transform: translate3d(-444px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
                     <?php 
-					
-					if(auth::user()->usertype=="super"){
+					$capteur = Capteur::find(
 					$historiques = Historique::where('consulte', null)
                     ->orderBy('created_at', 'desc')
                     ->take(3)
-                    ->get();}
-					else{$historiques = Historique::where('consulte', null)
-					->where('etab',auth::user->usertype)
-                    ->orderBy('created_at', 'desc')
-                    ->take(3)
-                    ->get();}
+                    ->get();
 						?>
 
                     @foreach($historiques as $historique)
-                    <?php $capt = Capteur::find($historique['capteur']);?>
+                    <?php 
+					$capt = Capteur::find($historique['capteur']);
+					$grp = Capteur::find($capt['parent']);
+					?>
                     @if($historique->consulte==null)
-
+					@if(auth::user()->usertype=="super" || $grp['etab']==auth::user()->etab)
                     <a href="#" class="dropdown-item d-flex">
                       <div>
                         <strong>Capteur {{$capt['code_capteur']}}</strong> a comme état: {{$historique->evenement}}
                         <div class="small text-muted">{{$historique->created_at}}</div>
                       </div>
                     </a>
-
+					
+					@endif
                     @endif
                     @endforeach
                     <div class="dropdown-divider"></div>
