@@ -86,7 +86,10 @@
                     <i class="fe fe-bell"></i>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" x-placement="bottom-end" style="position: absolute; transform: translate3d(-444px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
-                    <?php 
+                    <?php
+						$count = Historique::where('consulte',null)
+						->count();
+					if($count>0){
 					$historiques = Historique::where('consulte', null)
                     ->orderBy('created_at', 'desc')
                     ->take(3)
@@ -109,7 +112,15 @@
 					
 					@endif
                     @endif
-                    @endforeach
+                    @endforeach <?php
+					else {
+						?>
+						<a href="#" class="dropdown-item d-flex">
+                      <div>
+                        Aucune alerte pour le moment
+                      </div>
+                    </a>
+						
                     <div class="dropdown-divider"></div>
                     <a href="/alertes" class="dropdown-item text-center text-muted-dark">Tous les alertes</a>
                   </div>
