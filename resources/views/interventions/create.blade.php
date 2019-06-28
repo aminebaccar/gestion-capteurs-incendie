@@ -57,7 +57,8 @@
                 <?php
                   $pdo = new PDO('mysql:host=api.tangorythm.com;dbname=sdi', 'sdiuser', 'Sdi2019user');
                   if (\Auth::user()->usertype!="super") {
-                      $sql = "SELECT * FROM capteurs where etab like ".\Auth::user()->etab." and type like 'capteur'";
+					  
+                      $sql = "SELECT * FROM capteurs where etab like ".\Auth::user()->etab." and type like 'groupe'";
                   } else {
                       $sql = "SELECT * FROM capteurs where type like 'capteur'";
                   }
