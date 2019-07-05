@@ -88,7 +88,7 @@ if (!$conn) {
 	  $resq = $conn->query($query);
       while($rowq = $resq->fetch_assoc())
       {
-         $osms->sendSMS('tel:+21693233173', 'tel:+216' . $rowq['telephone'], "Capteur ".$code_capteur. " est en incendie le "+$data->created_at, 'GCI');
+         $osms->sendSMS('tel:+21693233173', 'tel:+216' . $rowq['telephone'], "Capteur ".$code_capteur. " est en incendie", 'GCI');
       }
   ///////////////////////SMS API /////////////////
 
